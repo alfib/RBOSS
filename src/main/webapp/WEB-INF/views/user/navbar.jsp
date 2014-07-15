@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a id="logoM" href="index.jsp"><img src="assets/img/logo.png" alt="Bootsshop"/></a>
+            <a id="logoM" href="index.jsp"><img src="../assets/img/logo.png" alt="Bootsshop"/></a>
             <a data-target="#sidebar" data-toggle="collapse" class="btn btn-navbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -9,10 +9,10 @@
             </a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li class="active"><a href="index.html">Home	</a></li>
-                    <li class=""><a href="special_offer.html">Specials Offer</a></li>
-                    <li class=""><a href="normal.html">Delivery</a></li>
-                    <li class=""><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="index.jsp">Home	</a></li>
+                    <li class=""><a href="special_offer.jsp">Specials Offer</a></li>
+                    <li class=""><a href="normal.jsp">Delivery</a></li>
+                    <li class=""><a href="contact.jsp">Contact</a></li>
                 </ul>
                 <form action="#" class="navbar-search pull-left">
                     <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>

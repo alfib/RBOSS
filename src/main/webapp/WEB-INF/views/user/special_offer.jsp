@@ -21,7 +21,7 @@
 
                 <div class="span9">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active">Special offers</li>
                     </ul>
                     <h3> 20% Discount Special offer<small class="pull-right"> 40 products are available </small></h3>	
@@ -46,7 +46,7 @@
                         <div class="tab-pane" id="listView">
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -55,7 +55,7 @@
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -64,15 +64,15 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -81,7 +81,7 @@
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -90,15 +90,15 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -107,7 +107,7 @@
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -116,15 +116,15 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -133,7 +133,7 @@
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -142,8 +142,8 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -160,7 +160,7 @@
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -169,15 +169,15 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="assets/products/4.jpg" alt=""/>
+                                    <img src="../assets/products/4.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -187,7 +187,7 @@
 
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ...
                                     </p>
-                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                     <br class="clr"/>
                                 </div>
                                 <div class="span3 alignR">
@@ -196,8 +196,8 @@
                                         <label class="checkbox">
                                             <input type="checkbox">  Adds product to compair
                                         </label><br/>
-                                        <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                     </form>
                                 </div>
                             </div>
@@ -208,109 +208,109 @@
                             <ul class="thumbnails">
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
                                                 Lorem Ipsum is simply dummy text. 
                                             </p>
-                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                         </div>
                                     </div>
                                 </li>
@@ -320,7 +320,7 @@
                             <hr class="soft"/>
                         </div>
                     </div>
-                    <a href="compair.html" class="btn btn-large pull-right">Compair Product</a>
+                    <a href="compair.jsp" class="btn btn-large pull-right">Compair Product</a>
                     <div class="pagination">
                         <ul>
                             <li><a href="#">&lsaquo;</a></li>

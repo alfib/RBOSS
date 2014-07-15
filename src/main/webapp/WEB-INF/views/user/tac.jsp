@@ -22,7 +22,7 @@
 
                 <div class="span9">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active">Terms and Conditions</li>
                     </ul>
                     <h3> Terms and Conditions</h3>	

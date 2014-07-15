@@ -20,8 +20,8 @@
                  <jsp:include page="sidebar.jsp" />
                 <div class="span9">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-                        <li><a href="products.html">Products</a> <span class="divider">/</span></li>
+                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
+                        <li><a href="products.jsp">Products</a> <span class="divider">/</span></li>
                         <li class="active">product Details</li>
                     </ul>	
                     <div class="row">	  
@@ -40,20 +40,20 @@
                                 #lightbox-image-details-caption { font-weight: bold; }#lightbox-image-details-currentNumber {display: block; clear: left; padding-bottom: 1.0em;}
                                 #lightbox-secNav-btnClose {width: 66px; float: right;padding-bottom: 0.7em;	}
                             </style>
-                            <a href="assets/products/large/f1.jpg" title="<h4>Fujifilm FinePix S2950 Digital Camera</h4>">
-                                <img src="assets/products/large/3.jpg" width="100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
+                            <a href="../assets/products/large/f1.jpg" title="<h4>Fujifilm FinePix S2950 Digital Camera</h4>">
+                                <img src="../assets/products/large/3.jpg" width="100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
                             </a>
                             <div id="myCarousel" class="moreOptopm carousel slide">
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="assets/products/large/f1.jpg"> <img width="29%" src="assets/products/large/f1.jpg" alt=""/></a>
-                                        <a href="assets/products/large/f2.jpg"> <img width="29%" src="assets/products/large/f2.jpg" alt=""/></a>
-                                        <a href="assets/products/large/f3.jpg" > <img width="29%" src="assets/products/large/f3.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f1.jpg"> <img width="29%" src="../assets/products/large/f1.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f2.jpg"> <img width="29%" src="../assets/products/large/f2.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f3.jpg" > <img width="29%" src="../assets/products/large/f3.jpg" alt=""/></a>
                                     </div>
                                     <div class="item">
-                                        <a href="assets/products/large/f3.jpg" > <img width="29%" src="assets/products/large/f3.jpg" alt=""/></a>
-                                        <a href="assets/products/large/f1.jpg"> <img width="29%" src="assets/products/large/f1.jpg" alt=""/></a>
-                                        <a href="assets/products/large/f2.jpg"> <img width="29%" src="assets/products/large/f2.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f3.jpg" > <img width="29%" src="../assets/products/large/f3.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f1.jpg"> <img width="29%" src="../assets/products/large/f1.jpg" alt=""/></a>
+                                        <a href="../assets/products/large/f2.jpg"> <img width="29%" src="../assets/products/large/f2.jpg" alt=""/></a>
                                     </div>
                                 </div>
                                 <!--  
@@ -182,7 +182,7 @@
                                         <div class="tab-pane" id="listView">
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -192,7 +192,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -202,8 +202,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -211,7 +211,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -221,7 +221,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -231,8 +231,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -240,7 +240,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -250,7 +250,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -260,8 +260,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -269,7 +269,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -279,7 +279,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -289,8 +289,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -299,7 +299,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -309,7 +309,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -319,8 +319,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -328,7 +328,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="assets/products/4.jpg" alt=""/>
+                                                    <img src="../assets/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -338,7 +338,7 @@
                                                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
                                                         that is why our goods are so popular..
                                                     </p>
-                                                    <a class="btn btn-small pull-right" href="product_details.html">View Details</a>
+                                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
                                                     <br class="clr"/>
                                                 </div>
                                                 <div class="span3 alignR">
@@ -348,8 +348,8 @@
                                                             <input type="checkbox">  Adds product to compair
                                                         </label><br/>
                                                         <div class="btn-group">
-                                                            <a href="product_details.html" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                                            <a href="product_details.html" class="btn btn-large">VIEW</a>
+                                                            <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                                            <a href="product_details.jsp" class="btn btn-large">VIEW</a>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -360,73 +360,73 @@
                                             <ul class="thumbnails">
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.html"><img src="assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
                                                                 Lorem Ipsum is simply dummy text. 
                                                             </p>
-                                                            <h4><a class="btn btn-large" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
                                                         </div>
                                                     </div>
                                                 </li>

@@ -20,10 +20,10 @@
                  <jsp:include page="sidebar.jsp" />
                 <div class="span9">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active"> SHOPPING CART</li>
                     </ul>
-                    <h3>  SHOPPING CART [ <small>3 Item(s) </small>]<a href="products.html" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
+                    <h3>  SHOPPING CART [ <small>3 Item(s) </small>]<a href="products.jsp" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
                     <hr class="soft"/>
                     <table class="table table-bordered">
                         <tbody>
@@ -41,7 +41,7 @@
                                         <div class="control-group">
                                             <label class="span2 control-label" for="inputPassword">Password</label> 
                                             <div class="controls">
-                                                <input type="password" id="inputPassword" placeholder="Password"> <a href="forgetpass.html">Forgot your password?</a>
+                                                <input type="password" id="inputPassword" placeholder="Password"> <a href="forgetpass.jsp">Forgot your password?</a>
                                             </div>
                                         </div>
                                         <div class="control-group">
@@ -69,7 +69,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <img width="60" src="assets/products/4.jpg" alt=""/></td>
+                                <td> <img width="60" src="../assets/products/4.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
@@ -80,7 +80,7 @@
                                 <td>$110.00</td>
                             </tr>
                             <tr>
-                                <td> <img width="60" src="assets/products/8.jpg" alt=""/></td>
+                                <td> <img width="60" src="../assets/products/8.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
@@ -91,7 +91,7 @@
                                 <td>$8.00</td>
                             </tr>
                             <tr>
-                                <td> <img width="60" src="assets/products/3.jpg" alt=""/></td>
+                                <td> <img width="60" src="../assets/products/3.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
@@ -165,8 +165,8 @@
                             </tr>
                         </tbody>
                     </table>		
-                    <a href="products.html" class="btn btn-large"><i class="icon-arrow-left"></i> Continue Shopping </a>
-                    <a href="login.html" class="btn btn-large pull-right">Next <i class="icon-arrow-right"></i></a>
+                    <a href="products.jsp" class="btn btn-large"><i class="icon-arrow-left"></i> Continue Shopping </a>
+                    <a href="login.jsp" class="btn btn-large pull-right">Next <i class="icon-arrow-right"></i></a>
 
                 </div>
             </div>

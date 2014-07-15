@@ -20,7 +20,7 @@
                  <jsp:include page="sidebar.jsp" />
                 <div class="span9" id="mainCol">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active">Page Title</li>
                     </ul>
                     <h3> Title of the page</h3>	
