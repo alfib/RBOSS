@@ -29,10 +29,11 @@
 <http access-decision-manager-ref="accessDecisionManager" authentication-manager-ref="users">
         <intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/loginfailed" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-<!--     <intercept-url pattern="/**" method="POST" access="ROLE_ADMIN" />
+     <intercept-url pattern="/**" method="POST" access="ROLE_ADMIN" /><!--
         <intercept-url pattern="/addCustomer" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/**" access="ROLE_USER" method="GET" />-->
         <intercept-url pattern="/customers" method="GET" access="ROLE_ADMIN" />
+        <intercept-url pattern="/admin/login"  access="IS_AUTHENTICATED_ANONYMOUSLY" />
         <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
        
         
