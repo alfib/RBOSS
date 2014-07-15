@@ -57,7 +57,7 @@ public class User {
     }
 
      @Column(table = "userrole")
-    private String authority="ROLE_USER";
+    private String authority;
 //    @Embedded
 //    @Valid
 //    private Address address = new Address();

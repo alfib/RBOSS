@@ -5,6 +5,7 @@
  */
 package com.mycompany.rboss.controller;
 
+import com.mycompany.rboss.domain.Category;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.mycompany.rboss.domain.Product;
+import com.mycompany.rboss.service.CategoryService;
 import com.mycompany.rboss.service.ProductService;
 
 /**
@@ -29,6 +31,8 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+    @Autowired
+    private CategoryService categoryService;
 
     public ProductController() {
     }
@@ -68,12 +72,15 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
-    public String addProductGet(@ModelAttribute("product") Product product) {
-        return "addProduct";
+    public String addProductGet(@ModelAttribute("product") Product product, Model model) {
+        model.addAttribute("categories",categoryService.getAll());
+        return "admin/product_list_AddProd";
     }
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
-    public String addProduct(@Valid Product product, BindingResult result, RedirectAttributes re) {
+    public String addProduct(@Valid Product product,@RequestParam String category, BindingResult result, RedirectAttributes re) {
+        Category ct = categoryService.get(Integer.parseInt(category));
+        product.setCategory(ct);
         String view = "redirect:/products";
         if (!result.hasErrors()) {
             productService.add(product);
