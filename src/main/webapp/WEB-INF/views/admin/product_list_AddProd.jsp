@@ -1,8 +1,5 @@
-<%-- 
-    Document   : product_list_AddProd
-    Created on : Jul 13, 2014, 8:36:24 PM
-    Author     : naimi_000
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 ﻿<!DOCTYPE html>
@@ -614,36 +611,40 @@
                             <div class="panel-body">
                                 <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form:form commandName="product" role="form" action="addProduct" method="post">
                                         <div class="form-group">
                                             <label>Product Name</label>
-                                            <input class="form-control" placeholder="Enter Product Name">
+                                            <form:input class="form-control" placeholder="Enter Product Name" path="name"/>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Categories</label>
-                                            <select data-placeholder="Choose a Country" class="form-control chzn-select" tabindex="2">
-                                                <option value="United States">United States</option>
+                                            <select name="category" data-placeholder="Choose a Country" class="form-control chzn-select" tabindex="2">
+                                                <c:forEach var="item" items="${categories}">
+                                                    <option value="${item.id}">${item.category}</option>
+                                                </c:forEach>
+<!--                                                <option value="United States">United States</option>
                                                 <option value="United Kingdom">United Kingdom</option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
-                                                <option value="Algeria">Algeria</option>
+                                                <option value="Algeria">Algeria</option>-->
                                             </select>
+                                            
                                         </div>
                                         
-                                        <div class="form-group">
+<!--                                        <div class="form-group">
                                             <label>Stock</label>
-                                            <input class="form-control" placeholder="Stock">
-                                        </div>
+                                            <form:input path="" class="form-control" placeholder="Stock"/>
+                                        </div>-->
                                         
                                         <div class="form-group">
                                             <label>Price</label>
-                                            <input class="form-control" placeholder="Price">
+                                            <form:input path="price" class="form-control" placeholder="Price"/>
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Text area</label>
-                                                <textarea class="form-control" rows="3"></textarea>
+                                            <form:textarea path="description" class="form-control" rows="3"></form:textarea>
                                         </div>
                                        
                                         <div class="form-group">
@@ -651,7 +652,7 @@
                                                <input type="submit" value="Submit" class="btn btn-primary" />
                                             </div>
                                         </div>
-                                    </form>
+                                    </form:form>
                                  </div>
                                  </div>   
                             </div>

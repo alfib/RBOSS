@@ -33,8 +33,7 @@
         <intercept-url pattern="/addCustomer" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/**" access="ROLE_USER" method="GET" />-->
         <intercept-url pattern="/customers" method="GET" access="ROLE_ADMIN" />
-        <intercept-url pattern="/admin"  access="ROLE_ADMIN" />
-        <intercept-url pattern="/faculty"  access="ROLE_FACULTY" />
+        <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
        
         
         <intercept-url pattern="/manageCourse" method="GET" access="ROLE_ADMIN" />
