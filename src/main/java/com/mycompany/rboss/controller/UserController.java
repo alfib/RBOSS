@@ -38,6 +38,12 @@ public class UserController {
     public String index() {
         return "index";
     }
+    
+    @RequestMapping(value="/login", method = RequestMethod.GET)
+    public String adminlogin(){
+        return "admin/login";
+    }
+    
     @RequestMapping("/customLoginFailPage")
     public String customLoginFailPage(Model model) {
         model.addAttribute("msg", "Invalid Username or Password, please try again");
