@@ -26,10 +26,10 @@
         </div>
         <div id="socialMedia" class="span3 pull-right">
             <h5>SOCIAL MEDIA </h5>
-            <a href="#"><img width="60" src="assets/img/facebook.png" title="facebook"/></a>
-            <a href="#"><img width="60" src="assets/img/twitter.png" title="twitter"/></a>
-            <a href="#"><img width="60" src="assets/img/rss.png" title="rss"/></a>
-            <a href="#"><img width="60" src="assets/img/youtube.png" title="youtube"/></a>
+            <a href="#"><img width="60" src="../assets/img/facebook.png" title="facebook"/></a>
+            <a href="#"><img width="60" src="../assets/img/twitter.png" title="twitter"/></a>
+            <a href="#"><img width="60" src="../assets/img/rss.png" title="rss"/></a>
+            <a href="#"><img width="60" src="../assets/img/youtube.png" title="youtube"/></a>
         </div> 
     </div>
     <hr class="soft">
