@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Amazon Style Search Box with jQuery & CSS - Demo by Karthikeyan K - W3lessons.info</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript">
+                function chGate()
+                {
+                    var e = document.getElementById("searchDropdownBox");//get the combobox
+                    var selGate = e.options[e.selectedIndex].value;//get selected value
+                    //you can also do use                  ^.text =>to get the text instead
+                    document.getElementById("nav-search-in-content").innerHTML = selGate;
+                    //^^ set the text to the selected value
+                    /// frGate.submit();
+                }
+            </script>
+    </head>
+    <body style="background:#fafafa;">
+
+        <div style="margin:30px auto; width:1000px; height:600px; background:#fff;">
+            <h2 style="text-align:center; margin-top:20px;">Amazon Style Search Box with jQuery & CSS</h2>
+
+            <div class="search_bar">
+                <label id="nav-search-label">Search</label>
+                <span class=" nav-facade-active" id="nav-search-in" style="width: auto;">
+                    <span data-value="search-alias=aps" id="nav-search-in-content" style="width: 60px; overflow: visible;">
+                        All Books
+                    </span>
+                    <span class="nav-down-arrow nav-sprite"></span>
+                    <select title="Search in" class="searchSelect" id="searchDropdownBox" name="books_category" onchange="chGate()"  style="top: 0px;">
+                        <option value="All Books" selected="selected">All Books</option>
+                        <option value="Arts & Photography" title="Arts & Photography">Arts & Photography</option>
+                        <option value="Biographies" title="Biographies & Memoirs">Biographies</option>
+                        <option value="Business & Investing" title="Business & Investing">Business & Investing</option>
+                        <option value="Childrens Books" title="Children's Books">Children Books</option>
+                        <option value="Comics & Graphic Novels" title="Comics & Graphic Novels">Comics & Graphic Novels</option>
+                        <option value="Adventure" title="Adventure">Adventure</option>
+                        <option value="Education & Reference" title="Education & Reference">Education & Reference</option>
+                        <option value="Parenting & Relationships" title="Parenting & Relationships">Parenting & Relationships</option>
+                        <option value="Science Fictions" title="Science Fictions">Science Fictions</option>
+                        <option value="Teen & Young Adult" title="Teen & Young Adult">Teen & Young Adult</option>
+                    </select>
+                </span>
+                <div class="nav-searchfield-outer nav-sprite">
+                    <input type="text" autocomplete="off" name="field-keywords" placeholder="Eg : Author Name, Book Name" title="Search For" id="twotabsearchtextbox" style="padding-right: 1px;">
+                </div>
+                <div class="nav-submit-button">
+                    <input type="submit" title="Go" class="nav-submit-input" value="Go">
+                </div>
+            </div>
+            <br>
+
+
+
+        </div>
+
+    </body>
+</html>
+
