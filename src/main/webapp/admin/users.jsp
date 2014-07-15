@@ -309,7 +309,7 @@
                     </a>
                     <br />
                     <div class="media-body">
-                        <h5 class="media-heading"> Joe Romlin</h5>
+                        <h5 class="media-heading"> Naimish Viradia</h5>
                         <ul class="list-unstyled user-info">
 
                             <li>
