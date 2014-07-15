@@ -77,6 +77,17 @@ public class UserController {
         return "user/login";
     }
     
+    @RequestMapping(value = "/user/index" , method = RequestMethod.GET)
+    public String userHome() {
+        return "user/index";
+    }
+    
+    @RequestMapping(value = "/user" , method = RequestMethod.GET)
+    public String userHome2() {
+        return "user/index";
+    }
+    
+    
     @RequestMapping(value = "/manageCustomer", method = RequestMethod.GET)
     public String manageCourse(@ModelAttribute("course") User customer) {
         return "manageCustomer";
