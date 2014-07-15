@@ -66,7 +66,7 @@ public class UserController {
     }
 
     
-     @RequestMapping("/login")
+     @RequestMapping("/user/login")
     public String login() {
         return "user/login";
     }
