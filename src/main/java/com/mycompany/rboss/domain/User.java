@@ -57,7 +57,7 @@ public class User {
     }
 
      @Column(table = "userrole")
-    private String authority;
+    private String authority="ROLE_USER";
 //    @Embedded
 //    @Valid
 //    private Address address = new Address();
@@ -146,23 +146,6 @@ public class User {
     public void setAuthority(String authority) {
         this.authority = authority;
     }
-
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
-//
-//    public CreditCard getCreditCard() {
-//        return creditCard;
-//    }
-//
-//    public void setCreditCard(CreditCard creditCard) {
-//        this.creditCard = creditCard;
-//    }
-
 
 
     public List<MyOrder> getOrders() {

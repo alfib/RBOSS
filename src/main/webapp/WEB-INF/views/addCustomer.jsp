@@ -1,58 +1,48 @@
-<%-- 
-    Document   : addCustomer
-    Created on : Jul 12, 2014, 4:58:02 AM
-    Author     : bin
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <title>Register</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-
-
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Please Register</title>
+        <link href="addcustomerStyle.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+       
+        <h1> Please Register Here</h1>
+         <h4 style="color:red">${msg}</h4>
+       
+        <form:form commandName="customer" action="addCustomer" method="post">
+            <form:errors path="*" cssClass="errorblock" element="div" />
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><form:input path="firstName" /> </td>
+                    <td><form:errors path="firstName" cssClass="error" /> </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><form:input path="lastName" /> </td>
+                    <td><form:errors path="lastName" cssClass="error"/> </td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><form:input path="email" /> </td>
+                    <td><form:errors path="email" cssClass="error"/> </td>
+                </tr>
+                <tr>
+                    <td>User Name:</td>
+                    <td><form:input path="userName" /> </td>
+                    <td><form:errors path="userName" cssClass="error"/> </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><form:password path="password" /> </td>
+                    <td><form:errors path="password" cssClass="error"/> </td>
+                </tr>
+                
+            </table>
+            <input type="submit"/>
 
-        <div class="container">
-
-            <div class="page-header">
-                <h1><small>please Register here</small></h1>
-            </div>
-
-            <!-- Simple Login - START -->
-            <form class="col-md-12">
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control input-lg" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control input-lg" placeholder="Password">
-                </div>
-
-                <div class="form-group">
-                    <input type="password" class="form-control input-lg" placeholder="Confirm Password">
-                </div>
-
-                <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block">Sign Up</button>        
-                    <span class="pull-right"><a href="#">login</a></span>
-                </div>
-            </form>
-            <!-- Simple Login - END -->
-
-        </div>
-
+        </form:form>
     </body>
 </html>

@@ -10,6 +10,8 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -23,7 +25,12 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String picture;
+    @ManyToOne
+    @JoinColumn(name="Category_id")
+    private Category category;
     private String status="ACTIVE";  //ACTIVE- product is not deleted
+    private boolean approval;
 
     public Product() {
     }
@@ -33,6 +40,16 @@ public class Product {
         this.price = price;
         this.description = description;
     }
+
+    public Product(String name, double price, String description, String picture, Category category) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.picture = picture;
+        this.category = category;
+    }
+    
+    
 
     public int getId() {
         return id;
@@ -72,6 +89,30 @@ public class Product {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public boolean isApproval() {
+        return approval;
+    }
+
+    public void setApproval(boolean approval) {
+        this.approval = approval;
     }
     
     

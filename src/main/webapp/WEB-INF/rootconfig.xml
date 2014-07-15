@@ -35,6 +35,7 @@
                 <value>com.mycompany.rboss.domain.ShoppingCart</value> 
                 <value>com.mycompany.rboss.domain.Address</value> 
                 <value>com.mycompany.rboss.domain.CreditCard</value> 
+                <value>com.mycompany.rboss.domain.Category</value> 
                            
             </list>
         </property>
@@ -44,7 +45,7 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost/tes" />
+        <property name="url" value="jdbc:mysql://localhost/test" />
         <property name="username" value="root" />
         <property name="password" value="" />
         <!--  username and password of our database should match the aboves, 
@@ -105,24 +106,60 @@
        <bean id="orderService" class ="com.mycompany.rboss.service.OrderService">
         <property name="orderDAO" ref="orderDAO"/>
     </bean>
+    <bean id="categoryDAO" class ="com.mycompany.rboss.DAO.CategoryDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+       <bean id="categoryService" class ="com.mycompany.rboss.service.CategoryService">
+        <property name="categoryDAO" ref="categoryDAO"/>
+    </bean>
+    
+    
+    <bean id="addressDAO" class ="com.mycompany.rboss.DAO.AddressDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+       <bean id="addressService" class ="com.mycompany.rboss.service.AddressService">
+        <property name="addressDAO" ref="addressDAO"/>
+    </bean>
+    <bean id="creditCardDAO" class ="com.mycompany.rboss.DAO.CreditCardDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+       <bean id="creditCartService" class ="com.mycompany.rboss.service.CreditCardService">
+        <property name="credidCardDAO" ref="creditCardDAO"/>
+    </bean>
+    
+    
+    
     
     <bean id="shoppingCartDAO" class ="com.mycompany.rboss.DAO.ShoppingCartDAO">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-            <bean id="shoppingCartService" class="com.mycompany.rboss.service.ShoppingCartService">
+    <bean id="shoppingCartService" class="com.mycompany.rboss.service.ShoppingCartService">
         <property name="shoppingCartDAO" ref="shoppingCartDAO"/>
     </bean>
     
-    <!-- grants access to the lower roles if there are any based on the role hierarchy -->
+<!--     grants access to the lower roles if there are any based on the role hierarchy 
     <bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">
         <constructor-arg ref="roleHierarchy" />
+    </bean>-->
+    
+    <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+        <property name="decisionVoters">
+            <list>
+                <bean class="org.springframework.security.access.vote.RoleVoter">
+                    <property name="rolePrefix" value="ROLE_"/>
+                </bean>
+                <bean class="org.springframework.security.access.vote.AuthenticatedVoter"/>
+            </list>
+        </property>
     </bean>
     
     
-    
     <!-- for method invocation handling as well as url authorization-->
-    <bean id="accessDecisionManager" 
+<!--    <bean id="accessDecisionManager" 
           class="org.springframework.security.access.vote.AffirmativeBased">
         <property name="decisionVoters">
             <list>
@@ -137,10 +174,10 @@
                 <bean class="org.springframework.security.access.vote.AuthenticatedVoter"/>
             </list>
         </property>
-    </bean>
+    </bean>-->
     
     <!--  Define the role hierarchy in the RoleHierarchyImpl i.e. which roles should include others  -->
-    <bean id="roleHierarchy"
+<!--    <bean id="roleHierarchy"
           class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
         <property name="hierarchy">
             <value>
@@ -148,6 +185,6 @@
                 ROLE_FACULTY > ROLE_CUSTOMER
             </value>
         </property>
-    </bean>
+    </bean>-->
     
 </beans>

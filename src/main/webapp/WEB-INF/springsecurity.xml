@@ -25,8 +25,8 @@
     <http pattern="/register" security="none" />
 
     <http pattern="/resources/**" security="none" />
-     
-<http access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users" >
+<!--     access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users"-->
+<http access-decision-manager-ref="accessDecisionManager" authentication-manager-ref="users">
         <intercept-url pattern="/login" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/loginfailed" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 <!--     <intercept-url pattern="/**" method="POST" access="ROLE_ADMIN" />
