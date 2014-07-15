@@ -48,6 +48,7 @@
     up static resources in the ${webappRoot}/resources/ directory -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
     <mvc:resources mapping="/assets/**" location="/WEB-INF/views/user/assets/"/>
+
     <mvc:resources mapping="/assets/**"  location="/WEB-INF/views/admin/assets/"/>
 </beans>
     
