@@ -15,8 +15,8 @@
                                         <ul class="thumbnails">
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="../assets/products/new.png"></a>
-                                                    <a  href="product_details.jsp"><img src="../assets/products/1.jpg" alt=""/></a>
+                                                    <a href="#" class="tag" src="../resources/products/new.png"></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/1.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -28,8 +28,8 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="../assets/products/new.png"></a>
-                                                    <a  href="product_details.jsp"><img src="../assets/products/2.jpg" alt=""/></a>
+                                                    <a href="#" class="tag" src="../resources/products/new.png"></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/2.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -41,8 +41,8 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="../assets/products/new.png"></a>
-                                                    <a  href="product_details.jsp"><img src="../assets/products/3.jpg" alt=""/></a>
+                                                    <a href="#" class="tag" src="../resources/products/new.png"></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -54,7 +54,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -70,7 +70,7 @@
                                         <ul class="thumbnails">
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/5.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/5.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -82,7 +82,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/6.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/6.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -94,7 +94,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/7.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/7.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -106,59 +106,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/8.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Product name</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="item">
-                                        <ul class="thumbnails">
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/9.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Product name</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/10.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Product name</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/11.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Product name</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/1.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/8.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -174,7 +122,7 @@
                                         <ul class="thumbnails">
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/2.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/9.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -186,7 +134,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/3.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/10.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -198,7 +146,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/11.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -210,7 +158,59 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a  href="product_details.jsp"><img src="../assets/products/5.jpg" alt=""/></a>
+                                                    <a  href="product_details.jsp"><img src="../resources/products/1.jpg" alt=""/></a>
+                                                    <div class="caption">
+                                                        <h5>Product name</h5>
+                                                        <p> 
+                                                            Lorem Ipsum is simply dummy text. 
+                                                        </p>
+                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="thumbnails">
+                                            <li class="span3">
+                                                <div class="thumbnail">
+                                                    <a  href="product_details.jsp"><img src="../resources/products/2.jpg" alt=""/></a>
+                                                    <div class="caption">
+                                                        <h5>Product name</h5>
+                                                        <p> 
+                                                            Lorem Ipsum is simply dummy text. 
+                                                        </p>
+                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="thumbnail">
+                                                    <a  href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                                    <div class="caption">
+                                                        <h5>Product name</h5>
+                                                        <p> 
+                                                            Lorem Ipsum is simply dummy text. 
+                                                        </p>
+                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="thumbnail">
+                                                    <a  href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
+                                                    <div class="caption">
+                                                        <h5>Product name</h5>
+                                                        <p> 
+                                                            Lorem Ipsum is simply dummy text. 
+                                                        </p>
+                                                        <h4><a class="btn" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="thumbnail">
+                                                    <a  href="product_details.jsp"><img src="../resources/products/5.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
                                                         <p> 
@@ -232,7 +232,7 @@
                         <ul class="thumbnails">
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/6.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/6.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 
@@ -244,7 +244,7 @@
                             </li>
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/7.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/7.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 
@@ -256,7 +256,7 @@
                             </li>
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/8.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/8.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 
@@ -273,7 +273,7 @@
                         <ul class="thumbnails">
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/9.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/9.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 
@@ -285,7 +285,7 @@
                             </li>
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/10.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/10.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 
@@ -297,7 +297,7 @@
                             </li>
                             <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="../assets/products/11.jpg" alt=""/></a>
+                                    <a  href="product_details.jsp"><img src="../resources/products/11.jpg" alt=""/></a>
                                     <div class="caption">
                                         <h5>Product name</h5>
                                         <p> 

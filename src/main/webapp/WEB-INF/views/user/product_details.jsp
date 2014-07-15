@@ -40,20 +40,20 @@
                                 #lightbox-image-details-caption { font-weight: bold; }#lightbox-image-details-currentNumber {display: block; clear: left; padding-bottom: 1.0em;}
                                 #lightbox-secNav-btnClose {width: 66px; float: right;padding-bottom: 0.7em;	}
                             </style>
-                            <a href="../assets/products/large/f1.jpg" title="<h4>Fujifilm FinePix S2950 Digital Camera</h4>">
-                                <img src="../assets/products/large/3.jpg" width="100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
+                            <a href="../resources/products/large/f1.jpg" title="<h4>Fujifilm FinePix S2950 Digital Camera</h4>">
+                                <img src="../resources/products/large/3.jpg" width="100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
                             </a>
                             <div id="myCarousel" class="moreOptopm carousel slide">
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="../assets/products/large/f1.jpg"> <img width="29%" src="../assets/products/large/f1.jpg" alt=""/></a>
-                                        <a href="../assets/products/large/f2.jpg"> <img width="29%" src="../assets/products/large/f2.jpg" alt=""/></a>
-                                        <a href="../assets/products/large/f3.jpg" > <img width="29%" src="../assets/products/large/f3.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f1.jpg"> <img width="29%" src="../resources/products/large/f1.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f2.jpg"> <img width="29%" src="../resources/products/large/f2.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f3.jpg" > <img width="29%" src="../resources/products/large/f3.jpg" alt=""/></a>
                                     </div>
                                     <div class="item">
-                                        <a href="../assets/products/large/f3.jpg" > <img width="29%" src="../assets/products/large/f3.jpg" alt=""/></a>
-                                        <a href="../assets/products/large/f1.jpg"> <img width="29%" src="../assets/products/large/f1.jpg" alt=""/></a>
-                                        <a href="../assets/products/large/f2.jpg"> <img width="29%" src="../assets/products/large/f2.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f3.jpg" > <img width="29%" src="../resources/products/large/f3.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f1.jpg"> <img width="29%" src="../resources/products/large/f1.jpg" alt=""/></a>
+                                        <a href="../resources/products/large/f2.jpg"> <img width="29%" src="../resources/products/large/f2.jpg" alt=""/></a>
                                     </div>
                                 </div>
                                 <!--  
@@ -182,7 +182,7 @@
                                         <div class="tab-pane" id="listView">
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -211,7 +211,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -240,7 +240,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -269,7 +269,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -299,7 +299,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -328,7 +328,7 @@
                                             <hr class="soft"/>
                                             <div class="row">	  
                                                 <div id="productView" class="span2">
-                                                    <img src="../assets/products/4.jpg" alt=""/>
+                                                    <img src="../resources/products/4.jpg" alt=""/>
                                                 </div>
                                                 <div class="span4">
                                                     <h3>New | Available</h3>				
@@ -360,7 +360,7 @@
                                             <ul class="thumbnails">
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
@@ -372,7 +372,7 @@
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
@@ -384,7 +384,7 @@
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
@@ -396,7 +396,7 @@
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
@@ -408,7 +408,7 @@
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 
@@ -420,7 +420,7 @@
                                                 </li>
                                                 <li class="span3">
                                                     <div class="thumbnail">
-                                                        <a href="product_details.jsp"><img src="../assets/products/4.jpg" alt=""/></a>
+                                                        <a href="product_details.jsp"><img src="../resources/products/4.jpg" alt=""/></a>
                                                         <div class="caption">
                                                             <h5>Manicure &amp; Pedicure</h5>
                                                             <p> 

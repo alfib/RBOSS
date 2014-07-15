@@ -31,7 +31,7 @@
 		<li style="border:0"> &nbsp;</li>	
 		<li>
 		  <div class="thumbnail">
-			<img src="../assets/products/1.jpg" alt="">
+			<img src="../resources/products/1.jpg" alt="">
 			<div class="caption">
 			  <h5>Product name</h5>
 			  <p> 
@@ -44,7 +44,7 @@
 		<li style="border:0"> &nbsp;</li>		
 		<li class="last">
 		  <div class="thumbnail">
-			<img src="../assets/products/2.jpg" alt="">
+			<img src="../resources/products/2.jpg" alt="">
 			<div class="caption">
 			  <h5>Product name</h5>
 			  <p> 
