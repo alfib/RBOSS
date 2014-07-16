@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -592,7 +594,7 @@
                         </div>
                     </div>
                     <hr />
-
+                    <form:form commandName="user" method="post" action="${pageContext.request.contextPath}/adminlistAllUsers" class="form-horizontal" id="NewUserForm" role="form">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
@@ -613,6 +615,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <c:forEach var="item" items="${allusers}" >
                                                 <tr class="odd gradeX">
                                                     <td>
                                                         <a href="#" target="_blank">
@@ -620,55 +623,20 @@
                                                         </a>
                                                     </td>
 
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
+                                                    <td>${item.userName}</td>
+                                                    <td>${item.email}</td>
+                                                    <td class="center">${item.authority}</td>
+                                                    <td class="center">${item.password}</td>
                                                     <td>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                            Delete
-                                                        </button>
+                                                        <form:form action="${pageContext.request.contextPath}/adminuser/delete?customerId=${item.id}" method="post">
+                                                            <button type="submit" id="100" class="btn btn-danger delete">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                                Delete
+                                                            </button>
+                                                        </form:form>
                                                     </td>
                                                 </tr>
-                                                <tr class="even gradeC">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                            <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
-                                                    <td>Internet Explorer 5.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">5</td>
-                                                    <td class="center">C</td>
-                                                    <td>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                            Delete
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr class="odd gradeA">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                            <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
-                                                    <td>Internet Explorer 5.5</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">5.5</td>
-                                                    <td class="center">A</td>
-                                                    <td>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                            Delete
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-
-
-
+                                                </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -684,7 +652,7 @@
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form class="form-horizontal" id="NewUserForm" role="form">
+                                        
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                 <h4 class="modal-title" id="myModalLabel">Add New Members</h4>
@@ -698,26 +666,26 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-4 control-label">Name</label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" name="name" class="form-control">
+                                                        <form:input path="userName" type="text" name="name" class="form-control" />
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="col-sm-4 control-label">Email</label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" name="email" class="form-control">
+                                                        <form:input path="email"  type="text" name="email" class="form-control" />
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="col-sm-4 control-label">Status</label>
                                                     <div class="col-sm-8">
-                                                        <select name="status" class="form-control">
+                                                        <form:select path="authority" name="status" class="form-control">
                                                             <option value="1">User</option>
                                                             <option value="2">Admin</option>
                                                             <option value="2">Vendor</option>
                                                             <option value="2">Internal</option>
-                                                        </select>
+                                                        </form:select>
                                                     </div>
                                                 </div>
 
@@ -727,7 +695,7 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-4 control-label">password</label>
                                                     <div class="col-sm-8">
-                                                        <input type="password" name="password" class="form-control">
+                                                        <form:input path="password" type="password" name="password" class="form-control" />
                                                     </div>
                                                 </div>
 
@@ -742,13 +710,13 @@
                                             <div class="modal-footer">
                                                 <button type="submit" class="NewRoomType btn btn-primary">Save changes</button>
                                             </div> 
-                                        </form>
 
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal-dialog -->
                             </div><!-- /.modal -->  
                         </div>
                     </div>
+                    </form:form>
 
 
 

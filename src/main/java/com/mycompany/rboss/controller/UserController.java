@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
@@ -245,6 +246,36 @@ public class UserController {
     }
     
     
+    @RequestMapping(value = "/adminlistAllUsers", method = RequestMethod.GET)
+    public String listAllUsersInAdmin(@ModelAttribute("user") User customer,Model model) {
+       List<User> allusers= userService.getAll();
+       model.addAttribute("allusers", allusers);
+        return "admin/users";
+        
+    }
     
+    @RequestMapping(value = "/adminuser/delete", method = RequestMethod.POST)
+    public String deleteUsersFmAdmin(@RequestParam(value = "customerId", required = true) int customerId) {
+        userService.delete(customerId);
+        return "redirect:/adminlistAllUsers";
+    }
+    
+    @RequestMapping(value = "/adminlistAllUsers", method = RequestMethod.POST)
+    public String addUserFmAdmin(@Valid User user, RedirectAttributes re,Model model) {
+        String view = "redirect:/addProduct";
+        //if (!result.hasErrors()) {
+            boolean x=userService.add(user);
+            if(x==false){
+                model.addAttribute("msg", "userName/email already exist, please try again ");
+                model.addAttribute("customer",user);
+                 
+            }
+                
+                
+       // } else {
+        //    view = "addCustomer";
+       // }
+        return view;
+    }
     
 }

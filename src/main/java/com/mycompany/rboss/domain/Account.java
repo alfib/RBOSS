@@ -11,8 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedNativeQueries;
-import javax.persistence.NamedNativeQuery;
 import javax.persistence.Version;
 
 /**
@@ -20,14 +18,11 @@ import javax.persistence.Version;
  * @author naimi_000
  */
 @Entity
-@NamedNativeQueries({
-@NamedNativeQuery(name = "Account_findAccountByNo",query = "SELECT a FROM Account a where a.accNo = :aNo"),
-@NamedNativeQuery(name = "Account_findAll",query = "SELECT a FROM Account a")
-})
+
 public class Account implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
     private String accName, accNo, expDate;

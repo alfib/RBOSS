@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/account")
+@RequestMapping("/restaccount")
 public class AccountRestFullService {
 
-    @Autowired
+//    @Autowired
     AccountService accountService;
 
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
@@ -41,7 +41,7 @@ public class AccountRestFullService {
 
         accountService.add(a);
         //model.addAttribute("movie", name);
-        return "list";
+        return "y";
 
     }
 

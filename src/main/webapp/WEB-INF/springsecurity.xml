@@ -28,7 +28,9 @@
     <http pattern="/addCategory" security="none" />
     <http pattern="/addProduct" security="none" />
     <http pattern="/products" security="none" />
+    <http pattern="/adminlistAllUsers" security="none" />
     <http pattern="/products/delete" security="none" />
+    <http pattern="/adminuser/delete" security="none" />
     <http pattern="/category/delete" security="none" />
     <http pattern="/admin/product_list" security="none" />
     <!--////-->
