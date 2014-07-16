@@ -9,16 +9,16 @@
             </a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li class="active"><a href="index.jsp">Home	</a></li>
-                    <li class=""><a href="special_offer.jsp">Specials Offer</a></li>
-                    <li class=""><a href="normal.jsp">Delivery</a></li>
-                    <li class=""><a href="contact.jsp">Contact</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
+                    <!--<li class=""><a href="special_offer.jsp">Specials Offer</a></li>-->
+                    <li class=""><a href="${pageContext.request.contextPath}/products">Buy Products</a></li>
+                    <li class=""><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
                 </ul>
                 <form action="#" class="navbar-search pull-left">
                     <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
                 </form>
                 <ul class="nav pull-right">
-                    <li><a href="register.jsp">Signup</a></li>
+                    <li><a href="${pageContext.request.contextPath}/register">Signup</a></li>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Login <b class="caret"></b></a>
                         <div class="dropdown-menu">

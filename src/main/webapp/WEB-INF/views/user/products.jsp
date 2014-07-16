@@ -17,13 +17,13 @@
             <jsp:include page="header.jsp" />
             <!-- ==================================================Header End====================================================================== -->
             <div class="row">
-                 <jsp:include page="sidebar.jsp" />
+                <jsp:include page="sidebar.jsp" />
                 <div class="span9">
                     <ul class="breadcrumb">
                         <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active">Products Name</li>
                     </ul>
-                    <h3> Products Name <small class="pull-right"> 40 products are available </small></h3>	
+                    <h3> Products Name <small class="pull-right"> ${products.size()} products are available </small></h3>	
                     <hr class="soft"/>
                     <p>
                         Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country.
@@ -48,263 +48,61 @@
                     <br class="clr"/>
                     <div class="tab-content">
                         <div class="tab-pane" id="listView">
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
+                            <c:forEach var="product" items="${products}">
+                                <div class="row">	  
+                                    <div id="productView" class="span2">
+                                        <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
+                                    </div>
+                                    <div class="span4">
+                                        <h3>New | Available</h3>				
+                                        <hr class="soft"/>
+                                        <h5>Product Name </h5>
+                                        <p>
+                                            Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+                                            that is why our goods are so popular..
+                                        </p>
+                                        <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
+                                        <br class="clr"/>
+                                    </div>
+                                    <div class="span3 alignR">
+                                        <form class="form-horizontal qtyFrm">
+                                            <h3> $140.00</h3>
+                                            <label class="checkbox">
+                                                <input type="checkbox">  Adds product to compair
+                                            </label><br/>
 
-                                        <a href="${pageContext.request.contextPath}/cart/1" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="${pageContext.request.contextPath}/product/1" class="btn btn-large">VIEW</a>
+                                            <a href="${pageContext.request.contextPath}/cart/1" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                            <a href="${pageContext.request.contextPath}/product/1" class="btn btn-large">VIEW</a>
 
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/1.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="soft"/>
+                                <hr class="soft"/>
+                            </c:forEach>
                         </div>
 
                         <div class="tab-pane  active" id="blockView">
                             <ul class="thumbnails">
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
+                                <c:forEach var="product" items="${products}">
+                                    <li class="span3">
+                                        <div class="thumbnail">
+                                            <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
+                                            <div class="caption">
+                                                <h5>Manicure &amp; Pedicure</h5>
+                                                <p> 
+                                                    I'm a paragraph. Click here 
+                                                </p>
+                                                <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="span3">
-                                    <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
-                                        <div class="caption">
-                                            <h5>Manicure &amp; Pedicure</h5>
-                                            <p> 
-                                                I'm a paragraph. Click here 
-                                            </p>
-                                            <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$22.00</span></h4>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </c:forEach>
                             </ul>
                             <hr class="soft"/>
                         </div>
                     </div>
 
-                    <a href="compair.jsp" class="btn btn-large pull-right">Compair Product</a>
+                    <!--<a href="compair.jsp" class="btn btn-large pull-right">Compair Product</a>-->
                     <div class="pagination">
                         <ul>
                             <li><a href="#">&lsaquo;</a></li>

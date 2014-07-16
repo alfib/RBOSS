@@ -32,6 +32,7 @@
     <http pattern="/category/delete" security="none" />
     <http pattern="/admin/product_list" security="none" />
     <!--////-->
+    <http pattern="/addCustomer" security="none" />
 
     <http pattern="/resources/**" security="none" />
 <!--     access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users"-->

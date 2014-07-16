@@ -23,6 +23,7 @@ public class CreditCard {
     //@CreditCardNumber
     private String creditCardNumber;
     private String expirationDate;
+    private String securityCode;
        @Id
        @GeneratedValue
     private int id;
@@ -30,10 +31,19 @@ public class CreditCard {
     public CreditCard() {
     }
 
-    public CreditCard(String issuer, String creditCardNumber, String expirationDate) {
+    public CreditCard(String issuer, String creditCardNumber, String expirationDate , String securityCode) {
         this.issuer = issuer;
         this.creditCardNumber = creditCardNumber;
         this.expirationDate = expirationDate;
+        this.securityCode = securityCode;
+    }
+
+    public String getSecurityCode() {
+        return securityCode;
+    }
+
+    public void setSecurityCode(String securityCode) {
+        this.securityCode = securityCode;
     }
 
     public String getIssuer() {
