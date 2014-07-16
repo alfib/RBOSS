@@ -18,7 +18,7 @@
                     <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
                 </form>
                 <ul class="nav pull-right">
-                    <li><a href="${pageContext.request.contextPath}/register">Signup</a></li>
+                    <li><a href="${pageContext.request.contextPath}/addUser">Signup</a></li>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Login <b class="caret"></b></a>
                         <div class="dropdown-menu">

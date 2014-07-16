@@ -62,7 +62,7 @@ public class UserController {
     @RequestMapping("/customLoginFailPage")
     public String customLoginFailPage(Model model) {
         model.addAttribute("msg", "Invalid Username or Password, please try again");
-        return "login";
+        return "user/login";
     }
     
     
@@ -83,7 +83,7 @@ public class UserController {
     }
     @RequestMapping("/default")
     public String gohome() {
-        return "home";
+        return "/home";
     }
 
     
@@ -296,7 +296,7 @@ public class UserController {
             model.addAttribute("msg", "You are already registered");
         }
     
-        return "redirect:/result";
+        return "redirect:/message";
     }
     
         
@@ -307,12 +307,12 @@ public class UserController {
     
         @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     public String addUser(@ModelAttribute("customer") User customer) {
-        return "addCustomer";
+        return "user/register";
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String addUser( User customer, RedirectAttributes re,Model model) {
-        String view = "redirect:/login";
+        String view = "redirect:/user/login";
         //if (!result.hasErrors()) {
         String encodedUser=encoder.encode(customer.getUserName());
             customer.setEnabled(false);
@@ -321,7 +321,7 @@ public class UserController {
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",customer);
-                 return "addCustomer";
+                 return "index";
             }
             
      
