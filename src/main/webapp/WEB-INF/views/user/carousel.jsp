@@ -1,29 +1,21 @@
 <div id="myCarousel" class="carousel slide homCar">
     <div class="carousel-inner">
         <div class="item active">
-            <img style="width:100%" src="../resources/carousel/1.jpg" alt=""/>
+            <img style="width:100%" src="resources/carousel/1.jpg" alt=""/>
             <div class="carousel-caption">
                 <h4>Second Thumbnail label</h4>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
         </div>
         <div class="item">
-            <img style="width:100%" src="../resources/carousel/2.jpg" alt=""/>
+            <img style="width:100%" src="resources/carousel/2.jpg" alt=""/>
             <div class="carousel-caption">
                 <h4>Second Thumbnail label</h4>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
         </div>
         <div class="item">
-            <img src="../resources/carousel/3.jpg" alt=""/>
-            <div class="carousel-caption">
-                <h4>Second Thumbnail label</h4>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-
-        </div>
-        <div class="item">
-            <img src="../resources/carousel/4.jpg" alt=""/>
+            <img src="resources/carousel/3.jpg" alt=""/>
             <div class="carousel-caption">
                 <h4>Second Thumbnail label</h4>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -31,7 +23,15 @@
 
         </div>
         <div class="item">
-            <img src="../resources/carousel/5.jpg" alt=""/>
+            <img src="resources/carousel/4.jpg" alt=""/>
+            <div class="carousel-caption">
+                <h4>Second Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="resources/carousel/5.jpg" alt=""/>
             <div class="carousel-caption">
                 <h4>Second Thumbnail label</h4>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>

@@ -69,7 +69,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td> <img width="60" src="../resources/products/4.jpg" alt=""/></td>
+                                <td> <img width="60" src="resources/products/4.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
@@ -80,7 +80,7 @@
                                 <td>$110.00</td>
                             </tr>
                             <tr>
-                                <td> <img width="60" src="../resources/products/8.jpg" alt=""/></td>
+                                <td> <img width="60" src="resources/products/8.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>
@@ -91,7 +91,7 @@
                                 <td>$8.00</td>
                             </tr>
                             <tr>
-                                <td> <img width="60" src="../resources/products/3.jpg" alt=""/></td>
+                                <td> <img width="60" src="resources/products/3.jpg" alt=""/></td>
                                 <td>MASSA AST<br/>Color : black, Material : metal</td>
                                 <td>
                                     <div class="input-append"><input class="span1" style="max-width:34px" placeholder="1" id="appendedInputButtons" size="16" type="text"><button class="btn" type="button"><i class="icon-minus"></i></button><button class="btn" type="button"><i class="icon-plus"></i></button><button class="btn btn-danger" type="button"><i class="icon-remove icon-white"></i></button>				</div>

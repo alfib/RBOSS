@@ -36,10 +36,10 @@ public class UserController {
     
     @RequestMapping("/")
     public String index() {
-        return "index";
+        return "user/index";
     }
     
-    @RequestMapping(value="/login", method = RequestMethod.GET)
+    @RequestMapping(value="/adminlogin", method = RequestMethod.GET)
     public String adminlogin(){
         return "admin/login";
     }
@@ -72,18 +72,13 @@ public class UserController {
     }
 
     
-     @RequestMapping("/user/login")
+     @RequestMapping("/login")
     public String login() {
         return "user/login";
     }
     
-    @RequestMapping(value = "/user/index" , method = RequestMethod.GET)
+    @RequestMapping(value = "/index" , method = RequestMethod.GET)
     public String userHome() {
-        return "user/index";
-    }
-    
-    @RequestMapping(value = "/user" , method = RequestMethod.GET)
-    public String userHome2() {
         return "user/index";
     }
     

@@ -26,10 +26,10 @@
         </div>
         <div id="socialMedia" class="span3 pull-right">
             <h5>SOCIAL MEDIA </h5>
-            <a href="#"><img width="60" src="../resources/img/facebook.png" title="facebook"/></a>
-            <a href="#"><img width="60" src="../resources/img/twitter.png" title="twitter"/></a>
-            <a href="#"><img width="60" src="../resources/img/rss.png" title="rss"/></a>
-            <a href="#"><img width="60" src="../resources/img/youtube.png" title="youtube"/></a>
+            <a href="#"><img width="60" src="resources/img/facebook.png" title="facebook"/></a>
+            <a href="#"><img width="60" src="resources/img/twitter.png" title="twitter"/></a>
+            <a href="#"><img width="60" src="resources/img/rss.png" title="rss"/></a>
+            <a href="#"><img width="60" src="resources/img/youtube.png" title="youtube"/></a>
         </div> 
     </div>
     <hr class="soft">
@@ -41,24 +41,24 @@
             ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
             <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-            <script src="../resources/js/jquery.js"></script>
-            <script src="../resources/js/google-code-prettify/prettify.js"></script>
-            <script src="../resources/js/application.js"></script>
-            <script src="../resources/js/bootstrap-transition.js"></script>
-            <script src="../resources/js/bootstrap-modal.js"></script>
-            <script src="../resources/js/bootstrap-scrollspy.js"></script>
-            <script src="../resources/js/bootstrap-alert.js"></script>
-            <script src="../resources/js/bootstrap-dropdown.js"></script>
-            <script src="../resources/js/bootstrap-tab.js"></script>
-            <script src="../resources/js/bootstrap-tooltip.js"></script>
-            <script src="../resources/js/bootstrap-popover.js"></script>
-            <script src="../resources/js/bootstrap-button.js"></script>
-            <script src="../resources/js/bootstrap-collapse.js"></script>
-            <script src="../resources/js/bootstrap-carousel.js"></script>
-            <script src="../resources/js/bootstrap-typeahead.js"></script>
-            <script src="../resources/js/bootstrap-affix.js"></script>
-            <script src="../resources/js/jquery.lightbox-0.5.js"></script>
-            <script src="../resources/js/bootsshoptgl.js"></script>
+            <script src="resources/js/jquery.js"></script>
+            <script src="resources/js/google-code-prettify/prettify.js"></script>
+            <script src="resources/js/application.js"></script>
+            <script src="resources/js/bootstrap-transition.js"></script>
+            <script src="resources/js/bootstrap-modal.js"></script>
+            <script src="resources/js/bootstrap-scrollspy.js"></script>
+            <script src="resources/js/bootstrap-alert.js"></script>
+            <script src="resources/js/bootstrap-dropdown.js"></script>
+            <script src="resources/js/bootstrap-tab.js"></script>
+            <script src="resources/js/bootstrap-tooltip.js"></script>
+            <script src="resources/js/bootstrap-popover.js"></script>
+            <script src="resources/js/bootstrap-button.js"></script>
+            <script src="resources/js/bootstrap-collapse.js"></script>
+            <script src="resources/js/bootstrap-carousel.js"></script>
+            <script src="resources/js/bootstrap-typeahead.js"></script>
+            <script src="resources/js/bootstrap-affix.js"></script>
+            <script src="resources/js/jquery.lightbox-0.5.js"></script>
+            <script src="resources/js/bootsshoptgl.js"></script>
             <script type="text/javascript">
                 $(function() {
                     $('#gallery a').lightBox();

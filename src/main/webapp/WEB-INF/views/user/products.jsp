@@ -50,7 +50,7 @@
                         <div class="tab-pane" id="listView">
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/3.jpg" alt=""/>
+                                    <img src="resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -79,7 +79,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/1.jpg" alt=""/>
+                                    <img src="resources/products/1.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -108,7 +108,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/3.jpg" alt=""/>
+                                    <img src="resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -137,7 +137,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/3.jpg" alt=""/>
+                                    <img src="resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -167,7 +167,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/3.jpg" alt=""/>
+                                    <img src="resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -196,7 +196,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="../resources/products/3.jpg" alt=""/>
+                                    <img src="resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -229,7 +229,7 @@
                             <ul class="thumbnails">
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -241,7 +241,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -253,7 +253,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -265,7 +265,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -277,7 +277,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -289,7 +289,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="../resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 

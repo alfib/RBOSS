@@ -45,11 +45,11 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    @RequestMapping(value = "products", method = RequestMethod.GET)
     public String getAll(Model model) {
 
         model.addAttribute("products", productService.getAll());
-        return "productList";
+        return "user/products";
     }
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
