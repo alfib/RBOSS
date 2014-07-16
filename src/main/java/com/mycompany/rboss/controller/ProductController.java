@@ -151,10 +151,22 @@ public class ProductController {
     /*for end users */
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String getAllProducts(@ModelAttribute("product") Product product,Model model) {
-
-        model.addAttribute("products", productService.getAll());
-        return "user/products";
+        List<Product> allProducts = productService.getAll();
+        model.addAttribute("products", allProducts); 
+        model.addAttribute("noOfProducts", allProducts.size());
+       
+        return "user/productList";
     }
     
-    
+    @RequestMapping(value="/addNewCategory", method = RequestMethod.POST)
+    public String addNewCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
+        String view = "redirect:/admin/addProduct";
+        System.out.println("get cat --->"+category.getCategory());
+        if (!result.hasErrors()) {
+            categoryService.add(category);
+        } else {
+            view = "/admin/addProduct";
+        }
+        return view;
+    }
 }
