@@ -43,5 +43,8 @@ public class CategoryService {
         return categoryDAO.get(id);
     }
     
+    public void add(Category category){
+        categoryDAO.add(category);
+    }
     
 }

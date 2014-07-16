@@ -611,7 +611,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                 <div class="col-lg-6">
-                                    <form:form commandName="product" role="form" action="addProduct" method="post">
+                                    <form:form commandName="product" role="form" action="${pageContext.request.contextPath}/addProduct" method="post">
                                         <div class="form-group">
                                             <label>Product Name</label>
                                             <form:input class="form-control" placeholder="Enter Product Name" path="name"/>

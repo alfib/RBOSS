@@ -23,6 +23,8 @@
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
     <http pattern="/register" security="none" />
+    <http pattern="/addCategory" security="none" />
+    <http pattern="/addProduct" security="none" />
 
     <http pattern="/resources/**" security="none" />
 <!--     access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users"-->
@@ -35,7 +37,8 @@
         <intercept-url pattern="/customers" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/admin/login"  access="IS_AUTHENTICATED_ANONYMOUSLY" />
         <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
-       
+        <intercept-url pattern="/addCategory" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/addProduct" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         
         <intercept-url pattern="/manageCourse" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addCourse"  access="ROLE_ADMIN" />

@@ -122,6 +122,23 @@ public class ProductController {
         return "searchProduct";
     }
     
+    @RequestMapping(value="/addCategory", method = RequestMethod.GET)
+    public String addCategoryGet(@ModelAttribute("product") Product product,Model model){
+        model.addAttribute("categories",categoryService.getAll());
+        return "admin/catagories";
+    }
     
+       
+    @RequestMapping(value="/addCategory", method = RequestMethod.POST)
+    public String addCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
+        String view = "redirect:/admin/addProduct";
+        System.out.println("get cat --->"+category.getCategory());
+        if (!result.hasErrors()) {
+            categoryService.add(category);
+        } else {
+            view = "/admin/addProduct";
+        }
+        return view;
+    }
 
 }
