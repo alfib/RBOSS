@@ -151,9 +151,11 @@ public class ProductController {
     /*for end users */
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String getAllProducts(@ModelAttribute("product") Product product,Model model) {
-
-        model.addAttribute("products", productService.getAll());
-        return "user/products";
+        List<Product> allProducts = productService.getAll();
+        model.addAttribute("products", allProducts); 
+        model.addAttribute("noOfProducts", allProducts.size());
+       
+        return "user/productList";
     }
     
     
