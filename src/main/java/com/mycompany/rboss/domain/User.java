@@ -78,6 +78,9 @@ public class User {
     private List<CreditCard> creditcards = new ArrayList<>();
     @OneToMany
     private List<Product> vendorProducts = new ArrayList<>();
+    
+    @OneToMany
+    private List<Account> account=new ArrayList<>();
 
     public User(String firstName, String lastName, String email, String username, String password) {
         this.firstName = firstName;
