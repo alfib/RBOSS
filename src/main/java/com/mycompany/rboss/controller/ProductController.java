@@ -142,4 +142,9 @@ public class ProductController {
         return view;
     }
 
+    @RequestMapping(value = "/category/delete", method = RequestMethod.POST)
+    public String deleteCategory(@RequestParam(value = "productId", required = true) int prodid) {
+        categoryService.delete(prodid);
+        return "redirect:/addCategory";
+    }
 }

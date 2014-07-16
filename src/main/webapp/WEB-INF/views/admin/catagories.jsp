@@ -605,10 +605,11 @@
                                         <li class="list-group-item">
                                             <i class="fa fa-gamepad fa-1x"></i> 
                                             ${item.category}
-                                            
-                                            <button type="button" id="3" class="btn btn-danger btn-xs saga_cek">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </button>
+                                            <form:form action="${pageContext.request.contextPath}/category/delete?productId=${item.id}" method="post">
+                                                <button type="submit" id="3" class="btn btn-danger btn-xs saga_cek">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                            </form:form>
                                         </li>
                                          </c:forEach>
                                     </ul>

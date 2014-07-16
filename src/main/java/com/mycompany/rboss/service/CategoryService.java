@@ -8,6 +8,7 @@ package com.mycompany.rboss.service;
 
 import com.mycompany.rboss.DAO.CategoryDAO;
 import com.mycompany.rboss.domain.Category;
+import com.mycompany.rboss.domain.Product;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,6 +33,9 @@ public class CategoryService {
     }
     
     public void delete(int id){
+        Category category= categoryDAO.get(id);
+        category.setStatus("DELETED");
+        categoryDAO.update(category);
         categoryDAO.delete(id);
     }
     

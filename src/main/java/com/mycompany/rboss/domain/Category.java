@@ -17,7 +17,16 @@ import javax.persistence.Id;
 public class Category {
     @Id
     private int id;
+    private String status="ACTIVE";  //ACTIVE- product is not deleted
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     public int getId() {
         return id;
     }
