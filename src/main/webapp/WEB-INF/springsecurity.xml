@@ -23,6 +23,7 @@
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
     <http pattern="/register" security="none" />
+    <http pattern="/addCustomer" security="none" />
 
     <http pattern="/resources/**" security="none" />
 <!--     access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users"-->
