@@ -117,9 +117,16 @@ public class ProductController {
             return "redirect:/notFound";
         }
     }
+    
     @RequestMapping(value="/searchProduct", method = RequestMethod.GET)
     public String searchProductByName(){;      
         return "searchProduct";
+    }
+    
+    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
+    public String display(@PathVariable int id, Model model) {
+        model.addAttribute("product", productService.get(id));
+        return "user/product_details";
     }
     
     

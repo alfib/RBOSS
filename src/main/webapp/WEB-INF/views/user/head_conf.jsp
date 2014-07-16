@@ -11,12 +11,12 @@
     -->
 
     <!-- Le styles  -->
-    <link href="resources/css/bootstrap.css" rel="stylesheet"/>
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet"/>
-    <link href="resources/css/docs.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/css/docs.css" rel="stylesheet"/>
 
-    <link href="resources/css/style.css" rel="stylesheet"/>
-    <link href="resources/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/resources/js/google-code-prettify/prettify.css" rel="stylesheet"/>
 
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -25,9 +25,9 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="resources/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="resources/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="resources/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resources/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="resources/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${pageContext.request.contextPath}/resources/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${pageContext.request.contextPath}/resources/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${pageContext.request.contextPath}/resources/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="${pageContext.request.contextPath}resources/ico/apple-touch-icon-57-precomposed.png">
 </head>

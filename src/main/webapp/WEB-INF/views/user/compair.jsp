@@ -44,7 +44,7 @@
                                         We always stay in touch with the latest fashion tendencies - that is why our 
                                         goods are so popular and we have a great number of faithful customers all over the country.
                                     </p>
-                                    <img src="resources/products/1.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/1.jpg" alt=""/>
                                     <form class="form-horizontal qtyFrm">
                                         <h3> $222.00</h3><br/>
                                         <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
@@ -57,7 +57,7 @@
                                         We always stay in touch with the latest fashion tendencies - that is why our 
                                         goods are so popular and we have a great number of faithful customers all over the country.
                                     </p>
-                                    <img src="resources/products/3.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
 
                                     <form class="form-horizontal qtyFrm">
                                         <h3> $190.00</h3>
