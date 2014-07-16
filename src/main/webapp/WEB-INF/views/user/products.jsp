@@ -50,7 +50,36 @@
                         <div class="tab-pane" id="listView">
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="resources/products/3.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
+                                </div>
+                                <div class="span4">
+                                    <h3>New | Available</h3>				
+                                    <hr class="soft"/>
+                                    <h5>Product Name </h5>
+                                    <p>
+                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+                                        that is why our goods are so popular..
+                                    </p>
+                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
+                                    <br class="clr"/>
+                                </div>
+                                <div class="span3 alignR">
+                                    <form class="form-horizontal qtyFrm">
+                                        <h3> $140.00</h3>
+                                        <label class="checkbox">
+                                            <input type="checkbox">  Adds product to compair
+                                        </label><br/>
+
+                                        <a href="${pageContext.request.contextPath}/cart/1" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
+                                        <a href="${pageContext.request.contextPath}/product/1" class="btn btn-large">VIEW</a>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <hr class="soft"/>
+                            <div class="row">	  
+                                <div id="productView" class="span2">
+                                    <img src="${pageContext.request.contextPath}/resources/products/1.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -79,7 +108,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="resources/products/1.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -108,36 +137,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="resources/products/3.jpg" alt=""/>
-                                </div>
-                                <div class="span4">
-                                    <h3>New | Available</h3>				
-                                    <hr class="soft"/>
-                                    <h5>Product Name </h5>
-                                    <p>
-                                        Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                        that is why our goods are so popular..
-                                    </p>
-                                    <a class="btn btn-small pull-right" href="product_details.jsp">View Details</a>
-                                    <br class="clr"/>
-                                </div>
-                                <div class="span3 alignR">
-                                    <form class="form-horizontal qtyFrm">
-                                        <h3> $140.00</h3>
-                                        <label class="checkbox">
-                                            <input type="checkbox">  Adds product to compair
-                                        </label><br/>
-
-                                        <a href="product_details.jsp" class="btn btn-large"><i class=" icon-shopping-cart"></i> Add to cart</a>
-                                        <a href="product_details.jsp" class="btn btn-large">VIEW</a>
-
-                                    </form>
-                                </div>
-                            </div>
-                            <hr class="soft"/>
-                            <div class="row">	  
-                                <div id="productView" class="span2">
-                                    <img src="resources/products/3.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -167,7 +167,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="resources/products/3.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -196,7 +196,7 @@
                             <hr class="soft"/>
                             <div class="row">	  
                                 <div id="productView" class="span2">
-                                    <img src="resources/products/3.jpg" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
                                 </div>
                                 <div class="span4">
                                     <h3>New | Available</h3>				
@@ -229,7 +229,7 @@
                             <ul class="thumbnails">
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -241,7 +241,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -253,7 +253,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -265,7 +265,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -277,7 +277,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 
@@ -289,7 +289,7 @@
                                 </li>
                                 <li class="span3">
                                     <div class="thumbnail">
-                                        <a href="product_details.jsp"><img src="resources/products/3.jpg" alt=""/></a>
+                                        <a href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                         <div class="caption">
                                             <h5>Manicure &amp; Pedicure</h5>
                                             <p> 

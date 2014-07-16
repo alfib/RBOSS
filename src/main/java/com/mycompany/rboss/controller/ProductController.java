@@ -117,6 +117,7 @@ public class ProductController {
             return "redirect:/notFound";
         }
     }
+    
     @RequestMapping(value="/searchProduct", method = RequestMethod.GET)
     public String searchProductByName(){;      
         return "searchProduct";
