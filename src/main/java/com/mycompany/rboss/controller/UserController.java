@@ -7,6 +7,10 @@
 package com.mycompany.rboss.controller;
 
 
+import com.mycompany.rboss.domain.CreditCard;
+import com.mycompany.rboss.domain.User;
+import com.mycompany.rboss.service.CreditCardService;
+import com.mycompany.rboss.service.UserService;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +25,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import com.mycompany.rboss.domain.User;
-import com.mycompany.rboss.service.UserService;
 
 /**
  *
@@ -33,6 +35,10 @@ public class UserController {
     
     @Autowired
     private UserService userService;
+    
+    @Autowired
+    private CreditCardService creditcardservice;
+    
     
     @RequestMapping("/")
     public String index() {
@@ -93,9 +99,16 @@ public class UserController {
         model.addAttribute("customers", userService.getAll());
         return "customerList";
     }
+    @RequestMapping(value = "/addcreditcard", method = RequestMethod.GET)
+    public String getCreditcard(@ModelAttribute("creditcard") CreditCard creditCard) {
+
+        return "addCreditCard";
+    }
     
     @RequestMapping(value = "/addCustomer", method = RequestMethod.GET)
     public String addCustomer(@ModelAttribute("customer") User customer) {
+        
+        
         return "addCustomer";
     }
 
