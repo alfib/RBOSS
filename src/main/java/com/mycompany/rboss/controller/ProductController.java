@@ -46,7 +46,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/vendorProducts", method = RequestMethod.GET)
-    public String getAll(@ModelAttribute("product") Product product,Model model) {
+    public String getAll(@ModelAttribute("product") Product product, Model model) {
 
         model.addAttribute("products", productService.getAll());
         return "admin/product_list";
@@ -73,12 +73,12 @@ public class ProductController {
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
     public String addProductGet(@ModelAttribute("product") Product product, Model model) {
-        model.addAttribute("categories",categoryService.getAll());
+        model.addAttribute("categories", categoryService.getAll());
         return "admin/product_list_AddProd";
     }
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
-    public String addProduct(@Valid Product product,@RequestParam String category, BindingResult result, RedirectAttributes re) {
+    public String addProduct(@Valid Product product, @RequestParam String category, BindingResult result, RedirectAttributes re) {
         Category ct = categoryService.get(Integer.parseInt(category));
         product.setCategory(ct);
         String view = "redirect:/products";
@@ -95,45 +95,41 @@ public class ProductController {
         productService.delete(prodid);
         return "redirect:/vendorProducts";
     }
-    
-    
-    
-    @RequestMapping(value="/productResult", method = RequestMethod.GET)
-    public String searchProductResult(){
-    
+
+    @RequestMapping(value = "/productResult", method = RequestMethod.GET)
+    public String searchProductResult() {
+
         return "productList";
     }
-    
-    @RequestMapping(value="/searchProduct", method = RequestMethod.POST)
-    public String searchProduct(RedirectAttributes re, Model model, String productName){
-      List<Product> products =  productService.getProductByName(productName);
-        
-        if(products.size()>0) {  //searched product found           
-          re.addFlashAttribute("products", products); 
-          return "redirect:/productResult";
-      }
-        else{
-            re.addFlashAttribute("msg", "Product not found, please try again"); 
+
+    @RequestMapping(value = "/searchProduct", method = RequestMethod.POST)
+    public String searchProduct(RedirectAttributes re, Model model, String productName) {
+        List<Product> products = productService.getProductByName(productName);
+
+        if (products.size() > 0) {  //searched product found           
+            re.addFlashAttribute("products", products);
+            return "redirect:/productResult";
+        } else {
+            re.addFlashAttribute("msg", "Product not found, please try again");
             return "redirect:/notFound";
         }
     }
-    
-    @RequestMapping(value="/searchProduct", method = RequestMethod.GET)
-    public String searchProductByName(){;      
+
+    @RequestMapping(value = "/searchProduct", method = RequestMethod.GET)
+    public String searchProductByName() {;
         return "searchProduct";
     }
-    
-    @RequestMapping(value="/addCategory", method = RequestMethod.GET)
-    public String addCategoryGet(@ModelAttribute("product") Product product,Model model){
-        model.addAttribute("categories",categoryService.getAll());
+
+    @RequestMapping(value = "/addCategory", method = RequestMethod.GET)
+    public String addCategoryGet(@ModelAttribute("product") Product product, Model model) {
+        model.addAttribute("categories", categoryService.getAll());
         return "admin/catagories";
     }
-    
-       
-    @RequestMapping(value="/addCategory", method = RequestMethod.POST)
-    public String addCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
+
+    @RequestMapping(value = "/addCategory", method = RequestMethod.POST)
+    public String addCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re) {
         String view = "redirect:/admin/addProduct";
-        System.out.println("get cat --->"+category.getCategory());
+        System.out.println("get cat --->" + category.getCategory());
         if (!result.hasErrors()) {
             categoryService.add(category);
         } else {
@@ -147,16 +143,32 @@ public class ProductController {
         categoryService.delete(prodid);
         return "redirect:/addCategory";
     }
-    
+
     /*for end users */
     @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public String getAllProducts(@ModelAttribute("product") Product product,Model model) {
+    public String getAllProducts(@ModelAttribute("product") Product product, Model model) {
         List<Product> allProducts = productService.getAll();
-        model.addAttribute("products", allProducts); 
+        model.addAttribute("products", allProducts);
         model.addAttribute("noOfProducts", allProducts.size());
-       
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+
         return "user/productList";
     }
-    
-    
+
+    @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
+    public String getProductsCat(
+            @PathVariable int id, Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> allProducts = productService.getProductsByCat(id);
+        model.addAttribute("products", allProducts);
+        model.addAttribute("noOfProducts", allProducts.size());
+        
+
+        return "user/productList";
+    }
+
 }
