@@ -93,5 +93,8 @@ public class UserService {
          return userDAO.searchCustomer(customerName);
          
      }
+          public boolean activate(String encoded){
+         return userDAO.activate(encoded);
+     }
     
 }

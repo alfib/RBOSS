@@ -158,33 +158,25 @@
     </bean>
     
     
-    <!-- for method invocation handling as well as url authorization-->
-<!--    <bean id="accessDecisionManager" 
-          class="org.springframework.security.access.vote.AffirmativeBased">
-        <property name="decisionVoters">
-            <list>
-                <ref bean="roleVoter" />
-                <bean class="org.springframework.security.web.access.expression.WebExpressionVoter">
-                    <property name="expressionHandler">
-                        <bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
-                            <property name="roleHierarchy" ref="roleHierarchy"/>
-                        </bean>
-                    </property>
-                </bean>
-                <bean class="org.springframework.security.access.vote.AuthenticatedVoter"/>
-            </list>
+     <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com"/>
+        <property name="port" value="587"/>
+        <property name="username" value="cs490Group3"/>
+        <property name="password" value="cs490Group3$"/>
+        <property name="javaMailProperties">
+            <props>
+                <!-- Use SMTP transport protocol -->
+                <prop key="mail.transport.protocol">smtp</prop>
+                <!-- Use SMTP-AUTH to authenticate to SMTP server -->
+                <prop key="mail.smtp.auth">true</prop>
+                <!-- Use TLS to encrypt communication with SMTP server -->
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+                
+                   
+            </props>
         </property>
-    </bean>-->
-    
-    <!--  Define the role hierarchy in the RoleHierarchyImpl i.e. which roles should include others  -->
-<!--    <bean id="roleHierarchy"
-          class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
-        <property name="hierarchy">
-            <value>
-                ROLE_ADMIN > ROLE_FACULTY
-                ROLE_FACULTY > ROLE_CUSTOMER
-            </value>
-        </property>
-    </bean>-->
+    </bean>
     
 </beans>

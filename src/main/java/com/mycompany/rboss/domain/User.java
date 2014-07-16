@@ -51,7 +51,9 @@ public class User {
     @NotEmpty
     private String password;
   
-    private boolean enabled=true;   
+    private boolean enabled;   
+    
+     private String activationLink;
 
     public User() {
     }
@@ -178,6 +180,14 @@ public class User {
 
     public void setCreditcards(List<CreditCard> creditcards) {
         this.creditcards = creditcards;
+    }
+
+    public String getActivationLink() {
+        return activationLink;
+    }
+
+    public void setActivationLink(String activationLink) {
+        this.activationLink = activationLink;
     }
 
     

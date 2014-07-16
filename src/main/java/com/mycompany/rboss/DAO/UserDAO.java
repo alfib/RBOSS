@@ -119,5 +119,17 @@ public class UserDAO {
          return q.list();
      }
      
+          public boolean activate(String encodedLink){
+         Query q=openSession().createQuery("select u from User u where u.activationLink = :link AND u.enabled=false");
+         q.setParameter("link", encodedLink);
+         if(q.list().isEmpty()){
+             return false;
+         }
+          User u = (User)q.uniqueResult();
+         u.setEnabled(true);
+         update(u);
+         return true;
+     }
+     
      
 }

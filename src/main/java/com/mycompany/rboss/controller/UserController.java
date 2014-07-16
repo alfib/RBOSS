@@ -17,6 +17,9 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -39,6 +42,11 @@ public class UserController {
     
     @Autowired
     private CreditCardService creditcardservice;
+    
+        @Autowired
+    private JavaMailSender mailSender;
+    @Autowired
+    private PasswordEncoder encoder;
     
     
     @RequestMapping("/")
@@ -275,6 +283,56 @@ public class UserController {
        // } else {
         //    view = "addCustomer";
        // }
+        return view;
+    }
+    
+        @RequestMapping(value="/activation/{id}" , method = RequestMethod.GET)
+    public String activateAccount(@PathVariable("id") String id, Model model){
+        boolean result = userService.activate(id);
+        if(result){
+            model.addAttribute("msg", "You are now a registered user");
+            
+        }else{
+            model.addAttribute("msg", "You are already registered");
+        }
+    
+        return "redirect:/result";
+    }
+    
+        
+    @RequestMapping("/result")
+    public String result(){
+        return "result";
+    }
+    
+        @RequestMapping(value = "/addUser", method = RequestMethod.GET)
+    public String addUser(@ModelAttribute("customer") User customer) {
+        return "addCustomer";
+    }
+
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+    public String addUser( User customer, RedirectAttributes re,Model model) {
+        String view = "redirect:/login";
+        //if (!result.hasErrors()) {
+        String encodedUser=encoder.encode(customer.getUserName());
+            customer.setEnabled(false);
+            customer.setActivationLink(encodedUser);
+            boolean x=userService.add(customer);
+            if(x==false){
+                model.addAttribute("msg", "userName/email already exist, please try again ");
+                model.addAttribute("customer",customer);
+                 return "addCustomer";
+            }
+            
+     
+            //call web service to create dummy credit card
+            SimpleMailMessage email = new SimpleMailMessage();
+            String link="http://localhost:8080/mycompany.com/activation/"+encodedUser;
+            email.setText(link);
+            email.setTo(customer.getEmail());
+            email.setSubject("Click the link to activate account");
+            mailSender.send(email);
+           
         return view;
     }
     
