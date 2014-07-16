@@ -156,5 +156,15 @@ public class ProductController {
         return "user/products";
     }
     
-    
+    @RequestMapping(value="/addNewCategory", method = RequestMethod.POST)
+    public String addNewCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
+        String view = "redirect:/admin/addProduct";
+        System.out.println("get cat --->"+category.getCategory());
+        if (!result.hasErrors()) {
+            categoryService.add(category);
+        } else {
+            view = "/admin/addProduct";
+        }
+        return view;
+    }
 }

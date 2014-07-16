@@ -587,76 +587,80 @@
                     <!-- Add new user button -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <a href="${pageContext.request.contextPath}/addAdminUser" class="btn btn-success">
-                                    <span class="glyphicon glyphicon-plus"></span> 
-                                    Add New Members
-                            </a>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-plus"></span> 
+                                Add New Members
+                            </button>
                         </div>
                     </div>
                     <hr />
-                    <form:form commandName="user" method="post" action="${pageContext.request.contextPath}/adminlistAllUsers" class="form-horizontal" id="NewUserForm" role="form">
+                    <form:form commandName="user" method="post" action="${pageContext.request.contextPath}/addAdminUser/${user.id}" class="form-horizontal" id="NewUserForm" role="form">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    Mamber List
-                                </div>
-                                <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                            <thead>
-                                                <tr>
-                                                    <th>Picture</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Status</th>
-                                                    <th>Date</th>
-                                                    <th>Admin</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <c:forEach var="item" items="${allusers}" >
-                                                <tr class="odd gradeX">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                            <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">Name</label>
+                                                    <div class="col-sm-8">
+                                                        <form:input path="userName" type="text" name="name" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">First Name</label>
+                                                    <div class="col-sm-8">
+                                                        <form:input path="firstName" type="text" name="fname" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                    
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">Last Name</label>
+                                                    <div class="col-sm-8">
+                                                        <form:input path="lastName" type="text" name="lname" class="form-control" />
+                                                    </div>
+                                                </div>    
 
-                                                    <td>${item.userName}</td>
-                                                    <td>${item.email}</td>
-                                                    <td class="center">${item.authority}</td>
-                                                    <td class="center">${item.password}</td>
-                                                    <td>
-                                                        <form:form action="${pageContext.request.contextPath}/adminuser/delete?customerId=${item.id}" method="post">
-                                                            <button type="submit" id="100" class="btn btn-danger delete">
-                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                                Delete
-                                                            </button>
-                                                        </form:form>
-                                                        <a href="${pageContext.request.contextPath}/addAdminUser/${item.id}" class="btn btn-success">
-                                                                <span class="glyphicon glyphicon-check"></span> 
-                                                                Edit
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                </c:forEach>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">Email</label>
+                                                    <div class="col-sm-8">
+                                                        <form:input path="email"  type="text" name="email" class="form-control" />
+                                                    </div>
+                                                    ${msg}
+                                                </div>
 
-                                </div>
-                            </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">Status</label>
+                                                    <div class="col-sm-8">
+                                                        <form:select path="authority" name="status" class="form-control">
+                                                            <option value="1">ROLE_USER</option>
+                                                            <option value="2">ROLE_ADMIN</option>
+                                                            <option value="2">ROLE_VENDOR</option>
+                                                            <option value="2">ROLE_INTERNAL</option>
+                                                        </form:select>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">password</label>
+                                                    <div class="col-sm-8">
+                                                        <form:input path="password" type="password" name="password" class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="col-sm-4 control-label">password</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="password" name="password2" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                            <div class="modal-footer">
+                                                <button type="submit" class="NewRoomType btn btn-primary">Save changes</button>
+                                            </div> 
                         </div>
                     </div>
-
-                   
                     </form:form>
-
-
-
-
-
                 </div>
 
 

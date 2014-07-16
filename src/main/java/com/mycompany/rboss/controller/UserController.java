@@ -336,4 +336,41 @@ public class UserController {
         return view;
     }
     
+    @RequestMapping(value = "/addAdminUser", method = RequestMethod.POST)
+    public String addUserTAdmin( User customer, RedirectAttributes re,Model model) {
+        String view = "redirect:/adminlistAllUsers";
+        //if (!result.hasErrors()) {
+        String encodedUser=encoder.encode(customer.getUserName());
+            customer.setEnabled(true);
+            boolean x=userService.add(customer);
+            if(x==false){
+                model.addAttribute("msg", "userName/email already exist, please try again ");
+                model.addAttribute("customer",customer);
+                 return "/addAdminUser";
+            }
+            
+           
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser", method = RequestMethod.GET)
+    public String addUserTAdminGet( User customer, RedirectAttributes re,Model model) {
+        String view = "admin/users_add";
+       
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser/{id}", method = RequestMethod.GET)
+    public String addUserTAdminGet( @PathVariable("id") int id, RedirectAttributes re,Model model) {
+        model.addAttribute("user",userService.get(id));
+        String view = "admin/users_edit";
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser/{id}", method = RequestMethod.POST)
+    public String addUserTAdminPOST(@Valid User user ,@PathVariable("id") int id, RedirectAttributes re,Model model) {
+        userService.update(user);
+        String view = "/adminlistAllUsers";
+        return view;
+    }
 }
