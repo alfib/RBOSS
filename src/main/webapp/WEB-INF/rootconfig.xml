@@ -36,6 +36,8 @@
                 <value>com.mycompany.rboss.domain.Address</value> 
                 <value>com.mycompany.rboss.domain.CreditCard</value> 
                 <value>com.mycompany.rboss.domain.Category</value> 
+                <value>com.mycompany.rboss.domain.Account</value> 
+                
                            
             </list>
         </property>
@@ -45,9 +47,12 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
+        <property name="url" value="jdbc:mysql://localhost:3306/test" />
+        <property name="username" value="root" />
+        <property name="password" value="" />
+<!--        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
         <property name="username" value="naimish" />
-        <property name="password" value="password" />
+        <property name="password" value="password" />-->
         <!--  username and password of our database should match the aboves, 
         we should use those in phpMyAdmin if we are using WAMP for example-->
     </bean>
@@ -57,7 +62,7 @@
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="properties">
             <props>
-                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect </prop>               
                 <prop key="connection.pool_size">1</prop>
                 <prop key="hibernate.show_sql">true</prop>
@@ -128,6 +133,13 @@
     
        <bean id="creditCartService" class ="com.mycompany.rboss.service.CreditCardService">
         <property name="credidCardDAO" ref="creditCardDAO"/>
+    </bean>
+    <bean id="accountDAO" class ="com.mycompany.rboss.DAO.AccountDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+       <bean id="accountService" class ="com.mycompany.rboss.service.AccountService">
+        <property name="accountDAO" ref="accountDAO"/>
     </bean>
     
     

@@ -16,6 +16,7 @@ import com.mycompany.rboss.domain.Account;
 import com.mycompany.rboss.domain.Address;
 import java.util.List;
 import org.hibernate.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -25,13 +26,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public class AccountService {
-    
+    @Autowired
     private AccountDAO accountDAO;
 
     public AccountService() {
     }
 
     public void setAddressDAO(AccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
+
+    public AccountDAO getAccountDAO() {
+        return accountDAO;
+    }
+
+    public void setAccountDAO(AccountDAO accountDAO) {
         this.accountDAO = accountDAO;
     }
 
