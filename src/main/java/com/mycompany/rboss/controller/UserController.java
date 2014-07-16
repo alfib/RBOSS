@@ -239,7 +239,10 @@ public class UserController {
         return "displayProfile";
     }
     
-    
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public String contact(Model model) {
+        return "user/contact";
+    }
     
     
     

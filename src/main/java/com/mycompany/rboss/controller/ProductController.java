@@ -45,20 +45,20 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    @RequestMapping(value = "/vendorProducts", method = RequestMethod.GET)
     public String getAll(@ModelAttribute("product") Product product,Model model) {
 
         model.addAttribute("products", productService.getAll());
         return "admin/product_list";
     }
 
-    @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/venderProducts/{id}", method = RequestMethod.GET)
     public String get(@PathVariable int id, Model model) {
         model.addAttribute("product", productService.get(id));
         return "editProduct";
     }
 
-    @RequestMapping(value = "/products/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/venderProducts/{id}", method = RequestMethod.POST)
     public String editProduct(@Valid Product product, BindingResult result,
             @PathVariable int id) {
         String view = "redirect:/products";
@@ -90,10 +90,10 @@ public class ProductController {
         return view;
     }
 
-    @RequestMapping(value = "/products/delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/vendorProducts/delete", method = RequestMethod.POST)
     public String delete(@RequestParam(value = "productId", required = true) int prodid) {
         productService.delete(prodid);
-        return "redirect:/products";
+        return "redirect:/vendorProducts";
     }
     
     
@@ -147,4 +147,14 @@ public class ProductController {
         categoryService.delete(prodid);
         return "redirect:/addCategory";
     }
+    
+    /*for end users */
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    public String getAllProducts(@ModelAttribute("product") Product product,Model model) {
+
+        model.addAttribute("products", productService.getAll());
+        return "user/products";
+    }
+    
+    
 }
