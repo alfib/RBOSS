@@ -23,8 +23,14 @@
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
     <http pattern="/register" security="none" />
+    
+    <!--// By naimish-->
     <http pattern="/addCategory" security="none" />
     <http pattern="/addProduct" security="none" />
+    <http pattern="/products" security="none" />
+    <http pattern="/products/delete" security="none" />
+    <http pattern="/admin/product_list" security="none" />
+    <!--////-->
 
     <http pattern="/resources/**" security="none" />
 <!--     access-decision-manager-ref="accessDecisionManager"  authentication-manager-ref="users"-->

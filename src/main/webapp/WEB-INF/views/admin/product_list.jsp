@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -579,7 +581,7 @@
                     <!-- Add new product button -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <a href="product_list_AddProd.jsp" class="btn btn-success">
+                            <a href="${pageContext.request.contextPath}/addProduct" class="btn btn-success">
                                 <span class="glyphicon glyphicon-plus"></span>Add New Product</a>
                         </div>
                     </div>
@@ -593,6 +595,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="table-responsive">
+                                        <form:form action="${pageContext.request.contextPath}/products" commandName="product" >
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
@@ -600,11 +603,12 @@
                                                     <th>Product Name</th>
                                                     <th>Price</th>
                                                     <th>Stock</th>
-                                                    <th>Date</th>
+                                                    <th>Approval</th>
                                                     <th>Admin</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <c:forEach var="item" items="${products}" >
                                                 <tr class="odd gradeX">
                                                     <td>
                                                         <a href="#" target="_blank">
@@ -612,17 +616,20 @@
                                                         </a>
                                                     </td>
 
-                                                    <td>Internet Explorer 4.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">4</td>
-                                                    <td class="center">X</td>
+                                                    <td>${item.name}</td>
+                                                    <td>${item.price}</td>
+                                                    <td class="center">${item.description}</td>
+                                                    <td class="center">${item.approval}</td>
                                                     <td>
                                                         <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-check"></span> Manage</a>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                        </button>
+                                                        <form:form action="${pageContext.request.contextPath}/products/delete?productId=${item.id}" method="post">
+                                                            <button type="submit" id="100" class="btn btn-danger delete">
+                                                                <span class="glyphicon glyphicon-trash"></span>
+                                                            </button>
+                                                        </form:form>    
                                                     </td>
                                                 </tr>
+                                                </c:forEach>
                                                 <tr class="even gradeC">
                                                     <td>
                                                         <a href="#" target="_blank">
@@ -663,6 +670,7 @@
 
                                             </tbody>
                                         </table>
+                                        </form:form>
                                     </div>
 
                                 </div>
