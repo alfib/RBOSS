@@ -76,6 +76,8 @@ public class User {
     private List<Address> addresses = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL)
     private List<CreditCard> creditcards = new ArrayList<>();
+    @OneToMany
+    private List<Product> vendorProducts = new ArrayList<>();
 
     public User(String firstName, String lastName, String email, String username, String password) {
         this.firstName = firstName;
@@ -188,6 +190,14 @@ public class User {
 
     public void setActivationLink(String activationLink) {
         this.activationLink = activationLink;
+    }
+
+    public List<Product> getVendorProducts() {
+        return vendorProducts;
+    }
+
+    public void setVendorProducts(List<Product> vendorProducts) {
+        this.vendorProducts = vendorProducts;
     }
 
     
