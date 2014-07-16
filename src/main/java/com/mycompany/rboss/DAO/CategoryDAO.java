@@ -38,7 +38,8 @@ public class CategoryDAO {
     }
     
     public List<Category> getAll(){
-        Query q = openSession().createQuery("from Category");
+        Query q = openSession().createQuery("Select p from Category p where p.status=:status");
+        q.setParameter("status", "ACTIVE");
         return q.list();
     }
     

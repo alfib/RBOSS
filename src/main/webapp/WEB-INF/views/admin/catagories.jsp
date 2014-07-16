@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 ﻿<!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -336,25 +338,25 @@
                     @Program : Naimish
                     All Manu
                     @Start
-                -->
-                
-                <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
-                <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
-                <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
-                <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
-                <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
-                <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
-                <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
-                <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
-                <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
-                <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
-                <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
-                
-                <!--
-                    @Program : Naimish
-                    @Finish
-                    
-                -->
+                    -->
+
+                    <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
+                    <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
+                    <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
+                    <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
+                    <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
+                    <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
+                    <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
+                    <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
+                    <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
+                    <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
+                    <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
+
+                    <!--
+                        @Program : Naimish
+                        @Finish
+                        
+                    -->
 
 
                     <li class="panel ">
@@ -596,18 +598,24 @@
                                     <a data-toggle="modal" data-target="#catagoryModal" class="open-AddBookDialog btn btn-success">
                                         <span class="glyphicon glyphicon-plus"></span> Add new category        </a> 
                                     <hr>
-
+                                    <form:form action="${pageContext.request.contextPath}/addCategory" method="post" role="form" commandName="product">
+                                    
                                     <ul class="list-group">	
+                                        <c:forEach var="item" items="${categories}" >
                                         <li class="list-group-item">
                                             <i class="fa fa-gamepad fa-1x"></i> 
-                                            Games  
-                                            <button type="button" id="3" class="btn btn-danger btn-xs saga_cek">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </button>
+                                            ${item.category}
+                                            <form:form action="${pageContext.request.contextPath}/category/delete?productId=${item.id}" method="post">
+                                                <button type="submit" id="3" class="btn btn-danger btn-xs saga_cek">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                            </form:form>
                                         </li>
-                                        
+                                         </c:forEach>
                                     </ul>
-                                    
+                                   
+                                   <%--</form:form>--%>
+
                                 </div>
                             </div>
                         </div>
@@ -623,19 +631,22 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             <h4 class="modal-title" id="H2">Add New Catagory</h4>
                                         </div>
-                                        <div class="modal-body">
-                                            <form role="form">
+                                        <%--<form:form role="form" action="/addCategory" method="post">--%>
+                                            <div class="modal-body">
+
                                                 <div class="form-group">
                                                     <label>Name :</label>
-                                                    <input class="form-control" />
+                                                    <form:input path="category" class="form-control" />
                                                 </div>
-                                               
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Send</button>
-                                        </div>
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <input type="submit" name="Submit" class="btn btn-primary" />
+                                                <!--<button type="button" class="btn btn-primary">Send</button>-->
+                                            </div>
+                                        </form:form>
                                     </div>
                                 </div>
                             </div>

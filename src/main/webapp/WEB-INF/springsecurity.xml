@@ -23,6 +23,15 @@
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
     <http pattern="/register" security="none" />
+    
+    <!--// By naimish-->
+    <http pattern="/addCategory" security="none" />
+    <http pattern="/addProduct" security="none" />
+    <http pattern="/products" security="none" />
+    <http pattern="/products/delete" security="none" />
+    <http pattern="/category/delete" security="none" />
+    <http pattern="/admin/product_list" security="none" />
+    <!--////-->
     <http pattern="/addCustomer" security="none" />
 
     <http pattern="/resources/**" security="none" />
@@ -36,7 +45,8 @@
         <intercept-url pattern="/customers" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/admin/login"  access="IS_AUTHENTICATED_ANONYMOUSLY" />
         <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
-       
+        <intercept-url pattern="/addCategory" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/addProduct" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         
         <intercept-url pattern="/manageCourse" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addCourse"  access="ROLE_ADMIN" />

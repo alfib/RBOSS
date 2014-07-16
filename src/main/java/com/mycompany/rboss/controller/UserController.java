@@ -83,6 +83,11 @@ public class UserController {
         return "user/login";
     }
     
+    @RequestMapping("/register")
+    public String register() {
+        return "user/register";
+    }
+    
     @RequestMapping(value = "/index" , method = RequestMethod.GET)
     public String userHome() {
         return "user/index";

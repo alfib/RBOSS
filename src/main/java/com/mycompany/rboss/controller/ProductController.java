@@ -45,11 +45,11 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @RequestMapping(value = "products", method = RequestMethod.GET)
-    public String getAll(Model model) {
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
+    public String getAll(@ModelAttribute("product") Product product,Model model) {
 
         model.addAttribute("products", productService.getAll());
-        return "user/products";
+        return "admin/product_list";
     }
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
@@ -123,12 +123,28 @@ public class ProductController {
         return "searchProduct";
     }
     
-    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
-    public String display(@PathVariable int id, Model model) {
-        model.addAttribute("product", productService.get(id));
-        return "user/product_details";
+    @RequestMapping(value="/addCategory", method = RequestMethod.GET)
+    public String addCategoryGet(@ModelAttribute("product") Product product,Model model){
+        model.addAttribute("categories",categoryService.getAll());
+        return "admin/catagories";
     }
     
-    
+       
+    @RequestMapping(value="/addCategory", method = RequestMethod.POST)
+    public String addCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
+        String view = "redirect:/admin/addProduct";
+        System.out.println("get cat --->"+category.getCategory());
+        if (!result.hasErrors()) {
+            categoryService.add(category);
+        } else {
+            view = "/admin/addProduct";
+        }
+        return view;
+    }
 
+    @RequestMapping(value = "/category/delete", method = RequestMethod.POST)
+    public String deleteCategory(@RequestParam(value = "productId", required = true) int prodid) {
+        categoryService.delete(prodid);
+        return "redirect:/addCategory";
+    }
 }
