@@ -350,7 +350,7 @@ public class UserController {
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",customer);
-            return "redirect:/index";
+                return "user/index";
             }
             
      
