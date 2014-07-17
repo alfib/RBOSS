@@ -57,4 +57,8 @@ public class ProductService {
      public List<Product> getProductByName(String name){
         return productDAO.getProductByName(name);
      }
+     
+     public List<Product> getProductsByCat(int id){
+        return productDAO.getByCat(id);
+     }
 }

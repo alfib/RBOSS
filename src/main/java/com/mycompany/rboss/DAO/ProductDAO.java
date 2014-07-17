@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.mycompany.rboss.DAO;
 
 import java.util.List;
@@ -19,14 +18,15 @@ import com.mycompany.rboss.domain.Product;
  */
 @Transactional
 public class ProductDAO {
-     private SessionFactory sessionFactory;
+
+    private SessionFactory sessionFactory;
 
     public ProductDAO() {
     }
-     
-     private Session openSession() {  
-        return sessionFactory.getCurrentSession();  
-    }  
+
+    private Session openSession() {
+        return sessionFactory.getCurrentSession();
+    }
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;
@@ -36,36 +36,43 @@ public class ProductDAO {
         this.sessionFactory = sessionFactory;
     }
 
-     public List<Product> getAll(){
-         Query q = openSession().createQuery("Select p from Product p where p.status=:status");
-         q.setParameter("status", "ACTIVE");
-         return q.list();
-     
-     }
-     
-     public void add(Product product){
-         openSession().persist(product);
-     }
-     
-     public Product get(int id){
-       return  (Product) openSession().get(Product.class, id);
-         
-     }
-    
-     public void update(Product p){
-         openSession().merge(p);
-     }
-     
-     public void delete(int id){
-         Product p = get(id);
-         openSession().delete(p);
-     }
-     
-     public List<Product> getProductByName(String name){
-         Query q = openSession().createQuery("select p from Product p where p.name like :name");
-         q.setParameter("name", name);
-         return q.list();
-     }
-     
-     
+    public List<Product> getAll() {
+        Query q = openSession().createQuery("Select p from Product p where p.status=:status");
+        q.setParameter("status", "ACTIVE");
+        return q.list();
+
+    }
+
+    public void add(Product product) {
+        openSession().persist(product);
+    }
+
+    public Product get(int id) {
+        return (Product) openSession().get(Product.class, id);
+
+    }
+
+    public void update(Product p) {
+        openSession().merge(p);
+    }
+
+    public void delete(int id) {
+        Product p = get(id);
+        openSession().delete(p);
+    }
+
+    public List<Product> getProductByName(String name) {
+        Query q = openSession().createQuery("select p from Product p where p.name like :name");
+        q.setParameter("name", name);
+        return q.list();
+    }
+
+    public List<Product> getByCat(int id) {
+
+        Query q = openSession().createQuery("select p from Product p where p.category.id = :id AND p.status=:status");
+        q.setParameter("status", "ACTIVE");
+        q.setParameter("id", id);
+        return q.list();
+    }
+
 }
