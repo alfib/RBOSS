@@ -38,22 +38,23 @@ public class VendorController {
     
             @RequestMapping(value = "/addVendor", method = RequestMethod.GET)
     public String addVendor(@ModelAttribute("vendor") User vendor) {
-        return "addVendor";
+        return "user/registerVendor";
     }
 
     @RequestMapping(value = "/addVendor", method = RequestMethod.POST)
     public String addVendor( User vendor, RedirectAttributes re,Model model) {
-        String view = "redirect:/login";
+        String view = "redirect:/index";
         //if (!result.hasErrors()) {
         String encodedUser=encoder.encode(vendor.getUserName());
+            vendor.setPassword(encoder.encode(vendor.getPassword()));
             vendor.setEnabled(false);
             vendor.setAuthority("ROLE_VENDOR");
             vendor.setActivationLink(encodedUser);
             boolean x=userService.add(vendor);
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
-                model.addAttribute("customer",vendor);
-                 return "addVendor";
+                model.addAttribute("vendor",vendor);
+                 return "user/registerVendor";
             }
             
      
