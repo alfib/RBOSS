@@ -4,6 +4,11 @@
     Author     : naimi_000
 --%>
 
+<%@page import="net.sf.jasperreports.engine.JRExporterParameter"%>
+<%@page import="net.sf.jasperreports.engine.export.JRPdfExporter"%>
+<%@page import="java.io.ByteArrayOutputStream"%>
+<%@page import="net.sf.jasperreports.engine.JasperFillManager"%>
+<%@page import="net.sf.jasperreports.engine.JasperPrint"%>
 <%@page import="net.sf.jasperreports.engine.JasperRunManager"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
@@ -399,14 +404,34 @@
                     Map parameters = new HashMap();
                     int orderid=1;
                     parameters.put("orderid", orderid);
-                    byte[] bytes = JasperRunManager.runReportToPdf(reportFile.getPath(), parameters, conn);
-
-                    response.setContentType("application/pdf");
-                    response.setContentLength(bytes.length);
-                    ServletOutputStream outStream = response.getOutputStream();
-                    outStream.write(bytes, 0, bytes.length);
-                    outStream.flush();
-                    outStream.close();
+//                    byte[] bytes = JasperRunManager.runReportToPdf(reportFile.getPath(), parameters, conn);
+//
+//                    response.setContentType("application/pdf");
+//                    response.setContentLength(bytes.length);
+//                    ServletOutputStream outStream = response.getOutputStream();
+//                    outStream.write(bytes, 0, bytes.length);
+//                    outStream.flush();
+//                    outStream.close();
+                    
+                    JasperPrint jasperPrint = JasperFillManager.fillReport(reportFile.getPath(), parameters, conn);
+ 
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+ 
+            JRPdfExporter exporter = new JRPdfExporter();
+            exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasperPrint);
+            exporter.setParameter(JRExporterParameter.OUTPUT_STREAM, baos);
+            exporter.exportReport();
+            byte[] bytes = baos.toByteArray();
+ 
+            if (bytes != null && bytes.length > 0) {
+                response.setContentType("application/pdf");
+                response.setHeader("Content-disposition", "inline; filename=\"olerite.pdf\"");
+                response.setContentLength(bytes.length);
+                ServletOutputStream outputStream = response.getOutputStream();
+                outputStream.write(bytes, 0, bytes.length);
+                outputStream.flush();
+                outputStream.close();
+            }
                 %>
 
 
