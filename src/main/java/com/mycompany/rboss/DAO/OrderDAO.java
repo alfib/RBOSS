@@ -38,7 +38,7 @@ public class OrderDAO {
     }
 
      public List<MyOrder> getAll(){
-         Query q = openSession().createQuery("from MyxOrder");
+         Query q = openSession().createQuery("from MyOrder");
          return q.list();
      
      }
