@@ -82,7 +82,9 @@
                select u.username, r.authority from user u,userrole r where
                u.id=r.user_id               
                 and u.username=?"/>
+            <password-encoder ref="passwordEncoder"  />
         </authentication-provider>
+        
     </authentication-manager>
     
         

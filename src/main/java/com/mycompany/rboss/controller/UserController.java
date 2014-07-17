@@ -15,6 +15,7 @@ import com.mycompany.rboss.service.CreditCardService;
 import com.mycompany.rboss.service.UserService;
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.UUID;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -294,14 +295,14 @@ public class UserController {
         @RequestMapping(value="/activation/{id}" , method = RequestMethod.GET)
     public String activateAccount(@PathVariable("id") String id, Model model){
         boolean result = userService.activate(id);
-//        if(result){
-//            model.addAttribute("msg", "You are now a registered user");
-//            
-//        }else{
-//            model.addAttribute("msg", "You are already registered");
-//        }
+        if(result){
+            model.addAttribute("msg", "You are now a registered user");
+            
+        }else{
+            model.addAttribute("msg", "You are already registered");
+        }
     
-        return "redirect:/user/login";
+        return "redirect:/login";
     }
     
         
@@ -319,10 +320,12 @@ public class UserController {
     public String addUser( User customer, RedirectAttributes re,Model model) {
         String view = "redirect:/login";
         //if (!result.hasErrors()) {
-        String encodedUser=encoder.encode(customer.getUserName());
+        String encodedUser=UUID.randomUUID().toString();
             customer.setEnabled(false);
             customer.setActivationLink(encodedUser);
             customer.setAuthority("ROLE_USER");
+            customer.setParentCompany("self");
+            customer.setPassword(encoder.encode(customer.getPassword()));
             boolean x=userService.add(customer);
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");

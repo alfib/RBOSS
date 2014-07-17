@@ -46,14 +46,14 @@
     <!-- the datasource -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost/test" />
         <property name="username" value="root" />
-        <property name="password" value="" />
+        <property name="password" value="" />-->
 
-<!--        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
+        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
         <property name="username" value="naimish" />
-        <property name="password" value="password" />-->
+        <property name="password" value="password" />
         <!--  username and password of our database should match the aboves, 
         we should use those in phpMyAdmin if we are using WAMP for example-->
     </bean>
@@ -63,7 +63,7 @@
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="properties">
             <props>
-                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect </prop>               
                 <prop key="connection.pool_size">1</prop>
                 <prop key="hibernate.show_sql">true</prop>
@@ -158,6 +158,7 @@
     <bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">
         <constructor-arg ref="roleHierarchy" />
     </bean>-->
+    
     
     <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
         <property name="decisionVoters">
