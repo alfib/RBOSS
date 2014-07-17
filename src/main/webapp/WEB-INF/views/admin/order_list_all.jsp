@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 ﻿<!DOCTYPE html>
 
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -340,17 +342,18 @@
                     @Start
                 -->
                 
-                <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
-                <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
-                <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
-                <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
-                <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
-                <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
-                <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
-                <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
-                <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
-                <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
-                <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
+                <li><a href="${pageContext.request.contextPath}/adminNewOrders"><i class="icon-columns"></i> New Orders </a></li>
+                    <li><a href="${pageContext.request.contextPath}/adminAllOrders"><i class="icon-columns"></i> All Orders  </a></li>
+                    <li><a href="${pageContext.request.contextPath}/addCategory"><i class="icon-columns"></i> Catagories </a></li>
+                    <li><a href="${pageContext.request.contextPath}/vendorProducts"><i class="icon-columns"></i> Product List  </a></li>
+                    <!--<li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>-->
+                    <!--<li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>-->
+                    <!--<li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>-->
+                    <!--<li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>-->
+                    <!--<li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>-->
+                    <li><a href="${pageContext.request.contextPath}/adminlistAllUsers"><i class="icon-columns"></i> Membership </a></li>
+                    <li><a href="${pageContext.request.contextPath}/settings"><i class="icon-columns"></i> Settings </a></li>
+
                 
                 <!--
                     @Program : Naimish
@@ -358,7 +361,7 @@
                     
                 -->
 
-                <li class="panel ">
+<!--                <li class="panel ">
                     <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
                         <i class="icon-tasks"> </i> UI Elements     
 	   
@@ -563,7 +566,7 @@
                         <li><a href="blank2.html"><i class="icon-angle-right"></i> Blank Page Two  </a></li>
                     </ul>
                 </li>
-                <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>
+                <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>-->
 
             </ul>
 
@@ -595,36 +598,25 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>Picture</th>
                                             <th>Order Number</th>
                                             <th>Bought</th>
-                                            <th>Status</th>
+                                            <th>Price</th>
                                             <th>Date</th>
                                             <th>Admin</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <c:forEach var="item" items="${orders}" >
                                         <tr class="odd gradeX">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 4.0</td>
-                                            <td>Win 95+</td>
-                                            <td class="center">4</td>
-                                            <td class="center">X</td>
+                                            <td>${item.id}</td>
+                                            <td>${item.id}</td>
+                                            <td class="center">${item.totalPrice}</td>
+                                            <td class="center">${item.date}</td>
                                             <td class="center">
                                             <a href="order_details.jsp" class="btn btn-success">Manage</a>
                                             </td>
                                         </tr>
-                                        <tr class="even gradeC">
-                                            <td>Trident</td>
-                                            <td>Internet Explorer 5.0</td>
-                                            <td>Win 95+</td>
-                                            <td class="center">5</td>
-                                            <td class="center">C</td>
-                                            <td class="center">
-                                            <a href="order_details.jsp" class="btn btn-success">Manage</a>
-                                            </td>
-                                        </tr>
-                                       
+                                       </c:forEach>
                                         
                                        
                                     </tbody>

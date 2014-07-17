@@ -5,6 +5,9 @@
 package report;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.HashMap;
@@ -13,7 +16,6 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperRunManager;
 
 /**
  *
@@ -25,6 +27,37 @@ public class NewClass {
         String path = getClass().getClassLoader().getResource(".").getPath();
         System.out.println(""+path);
         return path;
+    }
+    
+    public InputStream getStream(int ij,String n,String o) throws JRException, FileNotFoundException{
+         Connection conn=null;
+        org.apache.log4j.BasicConfigurator.configure();
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conn = DriverManager.getConnection("jdbc:mysql://54.88.228.192:3306/Naimish?zeroDateTimeBehavior=convertToNull", "naimish", "password");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            
+            Map parameters = new HashMap();
+            int orderid=1;
+            parameters.put("orderid", ij);
+            //String path = getClass().getClassLoader().getResource(".").getPath();
+            String path=new NewClass().getPath();
+            System.out.println("path--->"+path);
+            //path+="report/Order.jasper";
+            int i=n.indexOf("RBOSS");
+//            String npath=path.substring(0, i);
+//            npath+="RBOSS/src/main/java/report/Order.jasper";
+//            System.out.println("path--->"+npath);
+            JasperPrint jprint = (JasperPrint) JasperFillManager.fillReport(n, parameters, conn);
+            
+            // Export pdf file
+            JasperExportManager.exportReportToPdfFile(jprint, "1.pdf");
+            n=path.substring(0, i);
+            o+="1.pdf";
+            InputStream reportStream = new FileInputStream(o);
+            return reportStream;
     }
     
      public static void main(String[] args) throws JRException {
@@ -49,6 +82,7 @@ public class NewClass {
             int i=path.indexOf("RBOSS");
             String npath=path.substring(0, i);
             npath+="RBOSS/src/main/java/report/Order.jasper";
+            System.out.println("path--->"+npath);
             JasperPrint jprint = (JasperPrint) JasperFillManager.fillReport(npath, parameters, conn);
 
             // Export pdf file
