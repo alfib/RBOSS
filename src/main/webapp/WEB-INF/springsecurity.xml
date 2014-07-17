@@ -22,7 +22,7 @@
     
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
-    <http pattern="/register" security="none" />
+    <http pattern="/addUser" security="none" />
     
     <!--// By naimish-->
     <http pattern="/addCategory" security="none" />
@@ -38,6 +38,8 @@
     <http pattern="/adminuser/delete" security="none" />
     <http pattern="/category/delete" security="none" />
     <http pattern="/admin/product_list" security="none" />
+    
+    <http pattern="/searchProduct" security="none" />
     <!--////-->
     <http pattern="/addCustomer" security="none" />
 
@@ -83,7 +85,9 @@
                select u.username, r.authority from user u,userrole r where
                u.id=r.user_id               
                 and u.username=?"/>
+            <password-encoder ref="passwordEncoder"  />
         </authentication-provider>
+        
     </authentication-manager>
     
         

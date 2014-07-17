@@ -7,13 +7,18 @@
 package com.mycompany.rboss.controller;
 
 
+import com.mycompany.rboss.domain.Category;
 import com.mycompany.rboss.domain.CreditCard;
+import com.mycompany.rboss.domain.Product;
 import com.mycompany.rboss.domain.User;
+import com.mycompany.rboss.service.CategoryService;
 import com.mycompany.rboss.service.CreditCardService;
+import com.mycompany.rboss.service.ProductService;
 import com.mycompany.rboss.service.UserService;
 import static com.mycompany.rboss.service.UserService.SERVER_URI;
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.UUID;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -45,14 +50,25 @@ public class UserController {
     @Autowired
     private CreditCardService creditcardservice;
     
-        @Autowired
+    @Autowired
     private JavaMailSender mailSender;
     @Autowired
     private PasswordEncoder encoder;
-    
+    @Autowired
+    private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
     
     @RequestMapping("/")
-    public String index() {
+    public String index(Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
     
@@ -64,7 +80,7 @@ public class UserController {
     @RequestMapping("/customLoginFailPage")
     public String customLoginFailPage(Model model) {
         model.addAttribute("msg", "Invalid Username or Password, please try again");
-        return "login";
+        return "user/login";
     }
     
     
@@ -85,7 +101,7 @@ public class UserController {
     }
     @RequestMapping("/default")
     public String gohome() {
-        return "home";
+        return "user/index";
     }
 
     
@@ -100,7 +116,15 @@ public class UserController {
     }
     
     @RequestMapping(value = "/index" , method = RequestMethod.GET)
-    public String userHome() {
+    public String userHome(Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
     
@@ -298,7 +322,7 @@ public class UserController {
             model.addAttribute("msg", "You are already registered");
         }
     
-        return "redirect:/result";
+        return "redirect:/login";
     }
     
         
@@ -309,21 +333,24 @@ public class UserController {
     
         @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     public String addUser(@ModelAttribute("customer") User customer) {
-        return "addCustomer";
+        return "user/register";
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String addUser( User customer, RedirectAttributes re,Model model) {
         String view = "redirect:/login";
         //if (!result.hasErrors()) {
-        String encodedUser=encoder.encode(customer.getUserName());
+        String encodedUser=UUID.randomUUID().toString();
             customer.setEnabled(false);
             customer.setActivationLink(encodedUser);
+            customer.setAuthority("ROLE_USER");
+            customer.setParentCompany("self");
+            customer.setPassword(encoder.encode(customer.getPassword()));
             boolean x=userService.add(customer);
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",customer);
-                 return "addCustomer";
+                 return "user/index";
             }
             
      
