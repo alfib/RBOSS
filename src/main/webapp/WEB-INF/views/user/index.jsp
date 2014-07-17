@@ -6,6 +6,7 @@
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+
 <!DOCTYPE html>
 <html lang="en">
     <jsp:include page="head_conf.jsp" />

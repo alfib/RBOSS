@@ -17,16 +17,7 @@
     <body>
         <div id='cssmenu'>
 <ul>
-   <li class='active'><a href='${pageContext.request.contextPath}/home'><span>Home</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/products'><span>Products</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/searchCourse'><span>SEARCH COURSE</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/searchProduct'><span>SEARCH PRODUCT</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/courses'><span>REGISTRATION</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/profile'><span>PROFILE</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/faculty'><span>FACULTY</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/admin'><span>ADMIN</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/viewCart'><span>CART</span></a></li>
-   <li><a href='${pageContext.request.contextPath}/enrolled'><span>Enrolled Sections</span></a></li>
+   <li class='active'><a href='${pageContext.request.contextPath}'><span>Home</span></a></li>
    
    <li class='last'><a href='${pageContext.request.contextPath}/j_spring_security_logout'><span>LOGOUT</span></a></li>
 </ul>

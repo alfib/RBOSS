@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="span4">
                     <h4>Contact Details</h4>
-                    <p>	18 Fresno,<br/> CA 93727, USA
+                    <p>	MUM<br/> 1000 N St, IA, USA
                         <br/><br/>
                         info@mycompany.com<br/>
                         ﻿Tel 123-456-6780<br/>
