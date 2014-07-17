@@ -88,6 +88,7 @@ public class ProductController {
             view = "addProduct";
         }
         return view;
+        
     }
 
     @RequestMapping(value = "/vendorProducts/delete", method = RequestMethod.POST)
@@ -160,13 +161,21 @@ public class ProductController {
     
     @RequestMapping(value="/addNewCategory", method = RequestMethod.POST)
     public String addNewCategoryPost(@Valid Category category, BindingResult result, RedirectAttributes re){
-        String view = "redirect:/admin/addProduct";
+        String view = "redirect:/addCategory";
         System.out.println("get cat --->"+category.getCategory());
         if (!result.hasErrors()) {
             categoryService.add(category);
         } else {
-            view = "/admin/addProduct";
+            view = "/addCategory";
         }
         return view;
     }
+    
+    @RequestMapping(value="/addNewCategory", method = RequestMethod.GET)
+    public String addNewCategoryGET(@Valid Category category, BindingResult result, RedirectAttributes re){
+        String view = "admin/catagories_add";   
+        return view;
+    }
+    
+   
 }

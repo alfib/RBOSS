@@ -11,6 +11,7 @@ import com.mycompany.rboss.domain.CreditCard;
 import com.mycompany.rboss.domain.User;
 import com.mycompany.rboss.service.CreditCardService;
 import com.mycompany.rboss.service.UserService;
+import static com.mycompany.rboss.service.UserService.SERVER_URI;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
@@ -349,7 +351,7 @@ public class UserController {
                  return "/addAdminUser";
             }
             
-           
+           createAccount(customer.getUserName());
         return view;
     }
     
@@ -372,5 +374,15 @@ public class UserController {
         userService.update(user);
         String view = "/adminlistAllUsers";
         return view;
+    }
+    
+    private static void createAccount(String name) {
+        RestTemplate restTemplate = new RestTemplate();
+        //we can't get List<Employee> because JSON convertor doesn't know the type of
+        //object in the list and hence convert it to default JSON object type LinkedHashMap
+        String emps = restTemplate.getForObject(SERVER_URI+"create/"+name, String.class);
+        
+        System.out.println("----->"+emps);
+        
     }
 }

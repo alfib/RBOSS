@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27fc89ca-833b-441a-9fb0-581a2157250c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     CUSTOMER."CUSTOMER_ID" AS CUSTOMER_CUSTOMER_ID,
+     CUSTOMER."DISCOUNT_CODE" AS CUSTOMER_DISCOUNT_CODE,
+     CUSTOMER."ZIP" AS CUSTOMER_ZIP,
+     CUSTOMER."NAME" AS CUSTOMER_NAME,
+     CUSTOMER."ADDRESSLINE1" AS CUSTOMER_ADDRESSLINE1,
+     CUSTOMER."ADDRESSLINE2" AS CUSTOMER_ADDRESSLINE2,
+     CUSTOMER."CITY" AS CUSTOMER_CITY,
+     CUSTOMER."STATE" AS CUSTOMER_STATE,
+     CUSTOMER."PHONE" AS CUSTOMER_PHONE,
+     CUSTOMER."FAX" AS CUSTOMER_FAX,
+     CUSTOMER."EMAIL" AS CUSTOMER_EMAIL,
+     CUSTOMER."CREDIT_LIMIT" AS CUSTOMER_CREDIT_LIMIT
+FROM
+     "APP"."CUSTOMER" CUSTOMER]]>
+	</queryString>
+	<field name="CUSTOMER_CUSTOMER_ID" class="java.lang.Integer"/>
+	<field name="CUSTOMER_DISCOUNT_CODE" class="java.lang.String"/>
+	<field name="CUSTOMER_ZIP" class="java.lang.String"/>
+	<field name="CUSTOMER_NAME" class="java.lang.String"/>
+	<field name="CUSTOMER_ADDRESSLINE1" class="java.lang.String"/>
+	<field name="CUSTOMER_ADDRESSLINE2" class="java.lang.String"/>
+	<field name="CUSTOMER_CITY" class="java.lang.String"/>
+	<field name="CUSTOMER_STATE" class="java.lang.String"/>
+	<field name="CUSTOMER_PHONE" class="java.lang.String"/>
+	<field name="CUSTOMER_FAX" class="java.lang.String"/>
+	<field name="CUSTOMER_EMAIL" class="java.lang.String"/>
+	<field name="CUSTOMER_CREDIT_LIMIT" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9d047c10-05ad-499f-923e-cbeaa4ffc0aa"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_CUSTOMER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="147" y="0" width="100" height="20" uuid="ed0da405-d10e-4fd1-8b6d-f85d9f41b54e"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="100" height="20" uuid="9286d78e-9c31-466d-a0eb-c1cb900fc2b5"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_ZIP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="b94f8cb9-26d3-46a2-99d7-f1a4cf238bf1"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_CITY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
