@@ -46,8 +46,9 @@
     <!-- the datasource -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost/test" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+      
+<!--        <property name="url" value="jdbc:mysql://localhost/test" />
 
         <property name="username" value="root" />
         <property name="password" value="" />-->
@@ -180,6 +181,7 @@
         </property>
     </bean>
     
+    <bean id="authHandler" class="com.mycompany.rboss.service.AuthenticationHandler" /> 
     
      <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">

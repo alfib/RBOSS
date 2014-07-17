@@ -71,7 +71,8 @@
         <intercept-url pattern="/addSection" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addSection/{id}" method="POST" access="ROLE_ADMIN" />
         <form-login login-page="/login" authentication-failure-url="/customLoginFailPage" 
-                    default-target-url="/default" />
+                authentication-success-handler-ref="authHandler"
+                    />
         <logout logout-success-url="/"/>
     </http>
         

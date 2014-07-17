@@ -1,3 +1,5 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -21,7 +23,13 @@
                 
                 <ul class="nav pull-right">
                     <li><a href="${pageContext.request.contextPath}/addUser">Signup</a></li>
-                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                    <sec:authorize access="isAnonymous()">
+                        <li><a href="<c:url value= "/login" />">Login</a></li>
+                    </sec:authorize>
+                 <sec:authorize  access="hasAnyRole('ROLE_ADMIN','ROLE_USER','ROLE_VENDOR','ROLE_INTERNAL')">
+                 
+                 <li> <td><a href="<c:url value="/j_spring_security_logout"/>">Logout</a></td></li>
+                    </sec:authorize>        
                 </ul>
             </div><!-- /.nav-collapse -->
         </div>
