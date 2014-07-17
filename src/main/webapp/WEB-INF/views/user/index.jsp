@@ -4,7 +4,14 @@
             <jsp:include page="carousel.jsp" />
 
             <div class="row">
-                <jsp:include page="sidebar.jsp" />
+                <div id="sidebar" class="span3">
+                    <ul class="nav nav-list bs-docs-sidenav" style="display: block;">
+                        <c:forEach var="cat" items="${categories}">
+                            <li><a href="${pageContext.request.contextPath}/category/${cat.id}">${cat.category} [18]</a></li>
+                            </c:forEach>
+                    </ul>
+                </div>
+
                 <div class="span9">
                     <div>
                         <h3>New Products </h3>

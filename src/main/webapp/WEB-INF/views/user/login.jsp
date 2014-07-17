@@ -12,8 +12,8 @@
             <jsp:include page="header.jsp" />
             <!-- ==================================================Header End====================================================================== -->
             <div class="row">
-                <jsp:include page="sidebar.jsp" />
-                <div class="span9">
+                <%--<jsp:include page="sidebar.jsp" />--%>
+                <div class="span12">
                     <ul class="breadcrumb">
                         <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
                         <li class="active">Login</li>
