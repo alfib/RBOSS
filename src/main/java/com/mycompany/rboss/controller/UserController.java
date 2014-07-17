@@ -423,7 +423,8 @@ public class UserController {
     
     
     @RequestMapping(value = "/partialRegister", method = RequestMethod.POST)
-    public String addUserTAdmin(Model model , String email) {
+    public String partialSignup(Model model , String email) {
+        System.out.println("i m here");
         String view = "redirect:/addUser";
         model.addAttribute("email", email);
         return view;

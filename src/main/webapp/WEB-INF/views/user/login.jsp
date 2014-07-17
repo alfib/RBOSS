@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="controls">
-                                        <button type="submit" class="btn block">Create Your Account</button>
+                                        <input type="submit" class="btn block" value="Create Your Account">
                                     </div>
                                 </form>
                             </div>
