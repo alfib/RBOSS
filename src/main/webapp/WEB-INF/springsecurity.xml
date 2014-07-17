@@ -60,6 +60,8 @@
         <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
         <intercept-url pattern="/addCategory" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/addProduct" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/cart/{id}" access="ROLE_USER"/>
+        
         
         <intercept-url pattern="/manageCourse" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addCourse"  access="ROLE_ADMIN" />
@@ -71,7 +73,8 @@
         <intercept-url pattern="/addSection" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addSection/{id}" method="POST" access="ROLE_ADMIN" />
         <form-login login-page="/login" authentication-failure-url="/customLoginFailPage" 
-                    default-target-url="/default" />
+                authentication-success-handler-ref="authHandler"
+                    />
         <logout logout-success-url="/"/>
     </http>
         

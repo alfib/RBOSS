@@ -112,7 +112,7 @@ public class ProductController {
             model.addAttribute("noOfProducts", noOfProducts);
             List<Category> allCategories = categoryService.getAll();
             model.addAttribute("categories", allCategories);
-            return "user/productList";
+            return "productList";
 //        } else {
 //            re.addFlashAttribute("msg", "Product not found, please try again");
 //            return "redirect:/notFound";
@@ -157,7 +157,7 @@ public class ProductController {
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
 
-        return "user/productList";
+        return "productList";
     }
 
     @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
