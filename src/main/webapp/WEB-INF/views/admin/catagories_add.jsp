@@ -1,21 +1,22 @@
 <%-- 
-    Document   : users
-    Created on : Jul 14, 2014, 12:14:31 PM
+    Document   : catagories
+    Created on : Jul 14, 2014, 9:40:45 AM
     Author     : naimi_000
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
-    <!-- BEGIN HEAD -->
+    <!-- BEGIN HEAD-->
     <head>
+
         <meta charset="UTF-8" />
-        <title>BCORE Admin Dashboard Template | Data Tables</title>
+        <title>BCORE Admin Dashboard Template | Blank Page</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -32,8 +33,6 @@
         <!--END GLOBAL STYLES -->
 
         <!-- PAGE LEVEL STYLES -->
-        <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/plugins/social-buttons/social-buttons.css" />
         <!-- END PAGE LEVEL  STYLES -->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -41,8 +40,8 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
-    <!-- END HEAD -->
-    <!-- BEGIN BODY -->
+    <!-- END  HEAD-->
+    <!-- BEGIN BODY-->
     <body class="padTop53 " >
 
         <!-- MAIN WRAPPER -->
@@ -339,25 +338,26 @@
                     @Program : Naimish
                     All Manu
                     @Start
-                -->
-                
-                <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
-                <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
-                <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
-                <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
-                <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
-                <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
-                <li><a href="uploadImages.jsp"><i class="icon-columns"></i> Upload images </a></li>
-                <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
-                <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
-                <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
-                <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
-                
-                <!--
-                    @Program : Naimish
-                    @Finish
-                    
-                -->
+                    -->
+
+                    <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
+                    <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
+                    <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
+                    <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
+                    <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
+                    <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
+                    <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
+                    <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
+                    <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
+                    <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
+                    <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
+
+                    <!--
+                        @Program : Naimish
+                        @Finish
+                        
+                    -->
+
 
                     <li class="panel ">
                         <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
@@ -545,11 +545,11 @@
 
 
                     <li><a href="gallery.html"><i class="icon-film"></i> Image Gallery </a></li>
-                    <li class="panel active"><a href="tables.html"><i class="icon-table"></i> Data Tables </a></li>
+                    <li><a href="tables.html"><i class="icon-table"></i> Data Tables </a></li>
                     <li><a href="maps.html"><i class="icon-map-marker"></i> Maps </a></li>
 
                     <li><a href="grid.html"><i class="icon-columns"></i> Grid </a></li>
-                    <li class="panel">
+                    <li class="panel active">
                         <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#blank-nav">
                             <i class="icon-check-empty"></i> Blank Pages
 
@@ -558,7 +558,7 @@
                             </span>
                             &nbsp; <span class="label label-success">2</span>&nbsp;
                         </a>
-                        <ul class="collapse" id="blank-nav">
+                        <ul class="in" id="blank-nav">
 
                             <li><a href="blank.html"><i class="icon-angle-right"></i> Blank Page One  </a></li>
                             <li><a href="blank2.html"><i class="icon-angle-right"></i> Blank Page Two  </a></li>
@@ -575,84 +575,83 @@
             <!--PAGE CONTENT -->
             <div id="content">
 
-                <div class="inner">
+                <div class="inner" style="min-height:1200px;">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2> Data Tables </h2>
-                        </div>
-                    </div>
 
-                    <hr />
 
-                    <!-- Add new user button -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <a href="${pageContext.request.contextPath}/addAdminUser" class="btn btn-success">
-                                    <span class="glyphicon glyphicon-plus"></span> 
-                                    Add New Members
-                            </a>
+                            <h2>Catagories</h2>
+
+
+
                         </div>
                     </div>
                     <hr />
-                    <form:form commandName="user" method="post" action="${pageContext.request.contextPath}/adminlistAllUsers" class="form-horizontal" id="NewUserForm" role="form">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    Mamber List
-                                </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">Catagories</div>
                                 <div class="panel-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                            <thead>
-                                                <tr>
-                                                    <th>Picture</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Status</th>
-                                                    <th>Date</th>
-                                                    <th>Admin</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <c:forEach var="item" items="${allusers}" >
-                                                <tr class="odd gradeX">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                            <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
+                                    <div id="delete-cat"></div>
 
-                                                    <td>${item.userName}</td>
-                                                    <td>${item.email}</td>
-                                                    <td class="center">${item.authority}</td>
-                                                    <td class="center">${item.password}</td>
-                                                    <td>
-                                                        <form:form action="${pageContext.request.contextPath}/adminuser/delete?customerId=${item.id}" method="post">
-                                                            <button type="submit" id="100" class="btn btn-danger delete">
-                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                                Delete
-                                                            </button>
-                                                        </form:form>
-                                                        <a href="${pageContext.request.contextPath}/addAdminUser/${item.id}" class="btn btn-success">
-                                                                <span class="glyphicon glyphicon-check"></span> 
-                                                                Edit
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                </c:forEach>
-                                            </tbody>
-                                        </table>
-                                    </div>
+
+                                    <a data-toggle="modal" data-target="#catagoryModal" class="open-AddBookDialog btn btn-success">
+                                        <span class="glyphicon glyphicon-plus"></span> Add new category        </a> 
+                                    <hr>
+                                    <form:form action="${pageContext.request.contextPath}/addCategory" method="post" role="form" commandName="product">
+                                    
+                                    <ul class="list-group">	
+                                        <c:forEach var="item" items="${categories}" >
+                                        <li class="list-group-item">
+                                            <i class="fa fa-gamepad fa-1x"></i> 
+                                            ${item.category}
+                                            <form:form action="${pageContext.request.contextPath}/category/delete?productId=${item.id}" method="post">
+                                                <button type="submit" id="3" class="btn btn-danger btn-xs saga_cek">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                            </form:form>
+                                        </li>
+                                         </c:forEach>
+                                    </ul>
+                                   
+                                   <%--</form:form>--%>
 
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                   
-                    </form:form>
 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="modal fade" id="catagoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="H2">Add New Catagory</h4>
+                                        </div>
+                                        <%--<form:form role="form" action="/addCategory" method="post">--%>
+                                            <div class="modal-body">
+
+                                                <div class="form-group">
+                                                    <label>Name :</label>
+                                                    <form:input path="category" class="form-control" />
+                                                </div>
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <input type="submit" name="Submit" class="btn btn-primary" />
+                                                <!--<button type="button" class="btn btn-primary">Send</button>-->
+                                            </div>
+                                        </form:form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
@@ -680,16 +679,8 @@
         <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <!-- END GLOBAL SCRIPTS -->
-        <!-- PAGE LEVEL SCRIPTS -->
-        <script src="assets/plugins/dataTables/jquery.dataTables.js"></script>
-        <script src="assets/plugins/dataTables/dataTables.bootstrap.js"></script>
-        <script>
-            $(document).ready(function() {
-                $('#dataTables-example').dataTable();
-            });
-        </script>
-        <!-- END PAGE LEVEL SCRIPTS -->
     </body>
-    <!-- END BODY -->
+    <!-- END BODY-->
+
 </html>
 
