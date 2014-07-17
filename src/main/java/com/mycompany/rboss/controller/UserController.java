@@ -420,4 +420,12 @@ public class UserController {
         System.out.println("----->"+emps);
         
     }
+    
+    
+    @RequestMapping(value = "/partialRegister", method = RequestMethod.POST)
+    public String addUserTAdmin(Model model , String email) {
+        String view = "redirect:/addUser";
+        model.addAttribute("email", email);
+        return view;
+    }
 }
