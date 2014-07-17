@@ -37,12 +37,12 @@ public class VendorController {
     
     
             @RequestMapping(value = "/addVendor", method = RequestMethod.GET)
-    public String addUser(@ModelAttribute("vendor") User vendor) {
+    public String addVendor(@ModelAttribute("vendor") User vendor) {
         return "addVendor";
     }
 
     @RequestMapping(value = "/addVendor", method = RequestMethod.POST)
-    public String addUser( User vendor, RedirectAttributes re,Model model) {
+    public String addVendor( User vendor, RedirectAttributes re,Model model) {
         String view = "redirect:/login";
         //if (!result.hasErrors()) {
         String encodedUser=encoder.encode(vendor.getUserName());
@@ -53,7 +53,7 @@ public class VendorController {
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",vendor);
-                 return "addCustomer";
+                 return "addVendor";
             }
             
      

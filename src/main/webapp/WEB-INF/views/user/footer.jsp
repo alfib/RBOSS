@@ -33,7 +33,7 @@
         </div> 
     </div>
     <hr class="soft">
-    <p class="pull-right">&copy; Boot'sshop</p>
+    <p class="pull-right">&copy; Mycompany.com</p>
 </div><!-- /container -->
 
 

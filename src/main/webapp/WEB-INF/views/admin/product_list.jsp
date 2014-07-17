@@ -333,25 +333,25 @@
                     @Program : Naimish
                     All Manu
                     @Start
-                -->
-                
-                <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
-                <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
-                <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
-                <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
-                <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
-                <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
-                <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
-                <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
-                <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
-                <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
-                <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
-                
-                <!--
-                    @Program : Naimish
-                    @Finish
-                    
-                -->
+                    -->
+
+                    <li><a href="new_order_list.jsp"><i class="icon-columns"></i> New Orders </a></li>
+                    <li><a href="order_list_all.jsp"><i class="icon-columns"></i> All Orders  </a></li>
+                    <li><a href="catagories.jsp"><i class="icon-columns"></i> Catagories </a></li>
+                    <li><a href="product_list.jsp"><i class="icon-columns"></i> Product List  </a></li>
+                    <li><a href="shippingCharges.jsp"><i class="icon-columns"></i> Shipping Charges </a></li>
+                    <li><a href="blank.html"><i class="icon-columns"></i> Comments List  </a></li>
+                    <li><a href="uploadImages.html"><i class="icon-columns"></i> Upload images </a></li>
+                    <li><a href="fixedPages.jsp"><i class="icon-columns"></i> Fixed Pages  </a></li>
+                    <li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>
+                    <li><a href="users.jsp"><i class="icon-columns"></i> Membership </a></li>
+                    <li><a href="settings.jsp"><i class="icon-columns"></i> Settings </a></li>
+
+                    <!--
+                        @Program : Naimish
+                        @Finish
+                        
+                    -->
 
                     <li class="panel ">
                         <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav">
@@ -596,80 +596,66 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <form:form action="${pageContext.request.contextPath}/products" commandName="product" >
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                            <thead>
-                                                <tr>
-                                                    <th>Picture</th>
-                                                    <th>Product Name</th>
-                                                    <th>Price</th>
-                                                    <th>Stock</th>
-                                                    <th>Approval</th>
-                                                    <th>Admin</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <c:forEach var="item" items="${products}" >
-                                                <tr class="odd gradeX">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                        <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
+                                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Picture</th>
+                                                        <th>Product Name</th>
+                                                        <th>Price</th>
+                                                        <th>Stock</th>
+                                                        <th>Approval</th>
+                                                        <th>Admin</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <c:forEach var="item" items="${products}" >
+                                                        <tr class="odd gradeX">
+                                                            <td>
+                                                                <a href="#" target="_blank">
+                                                                    <img src="#" alt="İmages" class="img-thumbnail" width="120px">
+                                                                </a>
+                                                            </td>
 
-                                                    <td>${item.name}</td>
-                                                    <td>${item.price}</td>
-                                                    <td class="center">${item.description}</td>
-                                                    <td class="center">${item.approval}</td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-check"></span> Manage</a>
-                                                        <form:form action="${pageContext.request.contextPath}/products/delete?productId=${item.id}" method="post">
-                                                            <button type="submit" id="100" class="btn btn-danger delete">
-                                                                <span class="glyphicon glyphicon-trash"></span>
-                                                            </button>
-                                                        </form:form>    
-                                                    </td>
-                                                </tr>
-                                                </c:forEach>
-                                                <tr class="even gradeC">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                        <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
-                                                    <td>Internet Explorer 5.0</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">5</td>
-                                                    <td class="center">C</td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-check"></span> Manage</a>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr class="odd gradeA">
-                                                    <td>
-                                                        <a href="#" target="_blank">
-                                                        <img src="#" alt="İmages" class="img-thumbnail" width="120px">
-                                                        </a>
-                                                    </td>
-                                                    <td>Internet Explorer 5.5</td>
-                                                    <td>Win 95+</td>
-                                                    <td class="center">5.5</td>
-                                                    <td class="center">A</td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-check"></span> Manage</a>
-                                                        <button type="button" id="100" class="btn btn-danger delete">
-                                                            <span class="glyphicon glyphicon-trash"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                            <td>${item.name}</td>
+                                                            <td>${item.price}</td>
+                                                            <td class="center">${item.description}</td>
+                                                            <td class="center">${item.approval}</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-check"></span></a>
+                                                                <form:form action="${pageContext.request.contextPath}/products/delete?productId=${item.id}" method="post">
+                                                                    <button type="submit" id="100" class="btn btn-danger delete">
+                                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                                    </button>
+                                                                </form:form>  
+                                                                <form:form method="post" enctype="multipart/form-data"
+                                                                           modelAttribute="uploadedFile" action="${pageContext.request.contextPath}fileUpload/${item.id}">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>Upload File:&nbsp;</td>
+                                                                            <td><input type="file" name="file" />
+                                                                            </td>
+                                                                            <td style="color: red; font-style: italic;"><form:errors
+                                                                                    path="file" />
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td><input type="submit" value="Upload" />
+                                                                            </td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </form:form>
+                                                            </td>
+                                                        </tr>
+                                                    </c:forEach>
 
 
 
 
-                                            </tbody>
-                                        </table>
+
+                                                </tbody>
+                                            </table>
                                         </form:form>
                                     </div>
 

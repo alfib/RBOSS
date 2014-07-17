@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="807a8665-1df1-4875-8f92-869faf4ba76c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from (select p.id,p.`name`,sum(o.quantity) as 'totalearn' ,p.price*o.quantity as 'totalprice',p.price from OrderLineItem o,Product p where o.productId=p.id
+group by p.id,p.`name`,'totalprice') sp ORDER by sp.totalprice limit 5;]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalearn" class="java.math.BigDecimal"/>
+	<field name="totalprice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="802" uuid="f6aee5fe-26cd-4cdb-8288-f0e672295160"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="30" uuid="d0f841d1-c139-4bc6-b971-cb8623e24218"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="212" y="5" width="138" height="20" uuid="05d632c0-ed11-4022-95d5-57e6c5f509b8"/>
+				<text><![CDATA[Least 5 Selliing Product]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="32" uuid="11adbc70-00e7-464a-9dc6-56fe436ac3cc"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="364" y="6" width="64" height="20" uuid="ad62c75b-cd33-442b-b201-27d71f8ffa6b"/>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="6" width="294" height="20" uuid="74020b60-b4ea-47ed-998c-9e331797dd0d"/>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="6" width="31" height="20" uuid="a8aaaa28-5673-4daf-92c7-e0680ebb2ac1"/>
+				<textElement markup="none"/>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="6" width="64" height="20" uuid="ff59e167-5252-4900-908f-3bb6b25a69ca"/>
+				<text><![CDATA[Earn]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="43" y="1" width="294" height="20" uuid="68f28ddf-8965-454e-b58c-24e37878bf0f"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="1" width="64" height="20" uuid="21a977d9-846b-4931-984b-ecfddf091eba"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="0" width="31" height="20" uuid="6571ef93-bf7b-4b19-9b26-cd40b3e1fbf7"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="3" width="64" height="20" uuid="1bc51a83-dcb2-480f-b73f-b3c088d7f1c3"/>
+				<textFieldExpression><![CDATA[$F{totalprice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -26,7 +26,10 @@
     
     <!--// By naimish-->
     <http pattern="/addCategory" security="none" />
+    <http pattern="/addNewCategory" security="none" />
     <http pattern="/addProduct" security="none" />
+    <http pattern="/fileUpload" security="none" />
+    <http pattern="/fileUploadForm" security="none" />
     <http pattern="/products" security="none" />
     <http pattern="/addAdminUser" security="none" />
     <http pattern="/addAdminUser/{id}" security="none" />
@@ -82,7 +85,9 @@
                select u.username, r.authority from user u,userrole r where
                u.id=r.user_id               
                 and u.username=?"/>
+            <password-encoder ref="passwordEncoder"  />
         </authentication-provider>
+        
     </authentication-manager>
     
         
