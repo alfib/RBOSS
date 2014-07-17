@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 import com.mycompany.rboss.DAO.UserDAO;
 import com.mycompany.rboss.domain.User;
+import org.springframework.web.client.RestTemplate;
 
 
 
@@ -21,6 +22,7 @@ import com.mycompany.rboss.domain.User;
 
 @Transactional
 public class UserService {
+     public static final String SERVER_URI = "http://localhost:31503/SoftEng/restaccount/";
     private UserDAO userDAO; 
 
     public UserService() {
@@ -97,4 +99,5 @@ public class UserService {
          return userDAO.activate(encoded);
      }
     
+          
 }

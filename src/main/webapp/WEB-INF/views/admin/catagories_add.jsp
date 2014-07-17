@@ -587,72 +587,23 @@
                         </div>
                     </div>
                     <hr />
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="panel panel-info">
-                                <div class="panel-heading">Catagories</div>
-                                <div class="panel-body">
-                                    <div id="delete-cat"></div>
 
-
-                                    <a data-toggle="modal" data-target="#catagoryModal" class="open-AddBookDialog btn btn-success">
-                                        <span class="glyphicon glyphicon-plus"></span> Add new category        </a> 
-                                    <hr>
-                                    <form:form action="${pageContext.request.contextPath}/addCategory" method="post" role="form" commandName="product">
-                                    
-                                    <ul class="list-group">	
-                                        <c:forEach var="item" items="${categories}" >
-                                        <li class="list-group-item">
-                                            <i class="fa fa-gamepad fa-1x"></i> 
-                                            ${item.category}
-                                            <form:form action="${pageContext.request.contextPath}/category/delete?productId=${item.id}" method="post">
-                                                <button type="submit" id="3" class="btn btn-danger btn-xs saga_cek">
-                                                    <span class="glyphicon glyphicon-trash"></span>
-                                                </button>
-                                            </form:form>
-                                        </li>
-                                         </c:forEach>
-                                    </ul>
-                                   
-                                   <%--</form:form>--%>
-
+                    <form:form commandName="category" action="${pageContext.request.contextPath}/addNewCategory" method="post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>Name :</label>
+                                    <form:input path="category" class="form-control" />
                                 </div>
+
+
+                                <div class="modal-footer">
+                                    <input type="submit" name="Submit" class="btn btn-primary" />
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="modal fade" id="catagoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="H2">Add New Catagory</h4>
-                                        </div>
-                                        <%--<form:form role="form" action="/addCategory" method="post">--%>
-                                            <div class="modal-body">
-
-                                                <div class="form-group">
-                                                    <label>Name :</label>
-                                                    <form:input path="category" class="form-control" />
-                                                </div>
-
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <input type="submit" name="Submit" class="btn btn-primary" />
-                                                <!--<button type="button" class="btn btn-primary">Send</button>-->
-                                            </div>
-                                        </form:form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    </form:form>
 
 
 

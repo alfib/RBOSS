@@ -7,6 +7,8 @@
 package com.mycompany.rboss.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -15,10 +17,15 @@ import javax.persistence.Id;
  */
 @Entity
 public class Category {
+    
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
     private String status="ACTIVE";  //ACTIVE- product is not deleted
 
+    
+    
     public String getStatus() {
         return status;
     }
