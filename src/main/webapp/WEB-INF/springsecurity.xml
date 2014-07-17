@@ -60,6 +60,8 @@
         <intercept-url pattern="/admin/*"  access="ROLE_ADMIN" />
         <intercept-url pattern="/addCategory" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
         <intercept-url pattern="/addProduct" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/cart/{id}" access="ROLE_USER"/>
+        
         
         <intercept-url pattern="/manageCourse" method="GET" access="ROLE_ADMIN" />
         <intercept-url pattern="/addCourse"  access="ROLE_ADMIN" />

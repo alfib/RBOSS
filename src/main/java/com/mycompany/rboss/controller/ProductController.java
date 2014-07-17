@@ -157,7 +157,7 @@ public class ProductController {
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
 
-        return "user/productList";
+        return "productList";
     }
 
     @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
