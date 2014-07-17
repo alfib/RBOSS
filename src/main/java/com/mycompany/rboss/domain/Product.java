@@ -31,6 +31,7 @@ public class Product {
     private Category category;
     private String status="ACTIVE";  //ACTIVE- product is not deleted
     private boolean approval;
+    private int featured;
 
     public Product() {
     }
@@ -114,6 +115,16 @@ public class Product {
     public void setApproval(boolean approval) {
         this.approval = approval;
     }
+
+    public int getFeatured() {
+        return featured;
+    }
+
+    public void setFeatured(int featured) {
+        this.featured = featured;
+    }
+    
+    
     
     
 

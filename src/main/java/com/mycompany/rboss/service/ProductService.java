@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.mycompany.rboss.service;
 
 import java.util.List;
@@ -18,7 +17,7 @@ import com.mycompany.rboss.domain.Product;
  */
 @Transactional
 public class ProductService {
-    
+
     private ProductDAO productDAO;
 
     public ProductService() {
@@ -31,34 +30,43 @@ public class ProductService {
     public void setProductDAO(ProductDAO productDAO) {
         this.productDAO = productDAO;
     }
-    
-        public List<Product> getAll() {
-        return productDAO.getAll();        
+
+    public List<Product> getAll() {
+        return productDAO.getAll();
     }
-    
+
     public void add(Product product) {
-        productDAO.add(product);        
+        productDAO.add(product);
     }
 
     public Product get(int id) {
-        return productDAO.get(id);        
+        return productDAO.get(id);
     }
-   public void update(Product product) {
-        productDAO.update(product);      
+
+    public void update(Product product) {
+        productDAO.update(product);
     }
 
     public void delete(int id) {
-       // productDAO.delete(id);        
-       Product product= productDAO.get(id);
-       product.setStatus("DELETED");
-       productDAO.update(product);
-    } 
-    
-     public List<Product> getProductByName(String name){
+        // productDAO.delete(id);        
+        Product product = productDAO.get(id);
+        product.setStatus("DELETED");
+        productDAO.update(product);
+    }
+
+    public List<Product> getProductByName(String name) {
         return productDAO.getProductByName(name);
-     }
-     
-     public List<Product> getProductsByCat(int id){
+    }
+
+    public List<Product> getProductsByCat(int id) {
         return productDAO.getByCat(id);
-     }
+    }
+
+    public List<Product> getAllNew() {
+        return productDAO.getAllNew();
+    }
+    
+    public List<Product> getAllFeatured() {
+        return productDAO.getAllFeatured();
+    }
 }

@@ -9,9 +9,11 @@ package com.mycompany.rboss.controller;
 
 import com.mycompany.rboss.domain.Category;
 import com.mycompany.rboss.domain.CreditCard;
+import com.mycompany.rboss.domain.Product;
 import com.mycompany.rboss.domain.User;
 import com.mycompany.rboss.service.CategoryService;
 import com.mycompany.rboss.service.CreditCardService;
+import com.mycompany.rboss.service.ProductService;
 import com.mycompany.rboss.service.UserService;
 import java.security.Principal;
 import java.util.ArrayList;
@@ -51,11 +53,19 @@ public class UserController {
     private PasswordEncoder encoder;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
     
     @RequestMapping("/")
     public String index(Model model) {
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
     
@@ -103,7 +113,15 @@ public class UserController {
     }
     
     @RequestMapping(value = "/index" , method = RequestMethod.GET)
-    public String userHome() {
+    public String userHome(Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
     

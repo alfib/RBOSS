@@ -75,4 +75,20 @@ public class ProductDAO {
         return q.list();
     }
 
+    public List<Product> getAllNew() {
+        Query q = openSession().createQuery("Select p from Product p where p.status=:status ORDER BY id DESC");
+        q.setParameter("status", "ACTIVE");
+        q.setMaxResults(5);
+        return q.list();
+
+    }
+
+    public List<Product> getAllFeatured() {
+        Query q = openSession().createQuery("Select p from Product p where p.featured=:featured AND p.status=:status");
+        q.setParameter("featured", 1);
+        q.setParameter("status", "ACTIVE");
+        return q.list();
+
+    }
+
 }
