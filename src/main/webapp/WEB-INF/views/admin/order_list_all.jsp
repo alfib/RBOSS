@@ -613,7 +613,7 @@
                                             <td class="center">${item.totalPrice}</td>
                                             <td class="center">${item.date}</td>
                                             <td class="center">
-                                            <a href="order_details.jsp" class="btn btn-success">Manage</a>
+                                            <a href="${pageContext.request.contextPath}/getOrderLineInOrder/${item.id}" class="btn btn-success">Manage</a>
                                             </td>
                                         </tr>
                                        </c:forEach>

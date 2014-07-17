@@ -50,6 +50,7 @@
 
     <mvc:resources mapping="/assets/**"  location="/WEB-INF/views/admin/assets/"/>
     <mvc:resources mapping="addAdminUser/assets/**"  location="/WEB-INF/views/admin/assets/"/>
+    <mvc:resources mapping="getOrderLineInOrder/assets/**"  location="/WEB-INF/views/admin/assets/"/>
 </beans>
     
 

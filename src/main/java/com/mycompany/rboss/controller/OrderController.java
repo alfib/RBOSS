@@ -101,4 +101,11 @@ public class OrderController {
         //model.addAttribute("products", productService.getAll());
         return "admin/settings";
     }
+    
+    @RequestMapping(value = "/getOrderLineInOrder/{id}", method = RequestMethod.GET)
+    public String getOrderLineInOrder(Model model,@PathVariable("id") int id) {
+        model.addAttribute("products", orderService.get(id).getOrderline());
+        model.addAttribute("order", orderService.get(id));
+        return "admin/order_details";
+    }
 }
