@@ -16,6 +16,7 @@
         <!-- ======================================================================================================================== -->	
         <div id="mainBody" class="container">
             <jsp:include page="header.jsp" />
+            <jsp:include page="carousel.jsp" />
             <div class="row">
                 <div id="sidebar" class="span3">
                     <ul class="nav nav-list bs-docs-sidenav" style="display: block;">
@@ -24,7 +25,7 @@
                             </c:forEach>
                     </ul>
                 </div>
-
+                
                 <div class="span9">
                     <div>
                         <h3>New Products </h3>
