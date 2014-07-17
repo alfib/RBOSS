@@ -46,8 +46,9 @@
     <!-- the datasource -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-<!--        <property name="url" value="jdbc:mysql://localhost/test" />
+
+<!--    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost/test" />
         <property name="username" value="root" />
         <property name="password" value="" />-->
 
@@ -63,7 +64,7 @@
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="properties">
             <props>
-                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+<!--                <prop key="hibernate.hbm2ddl.auto">create</prop>-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect </prop>               
                 <prop key="connection.pool_size">1</prop>
                 <prop key="hibernate.show_sql">true</prop>
@@ -79,6 +80,13 @@
     <!-- look for transaction annotations -->
     <tx:annotation-driven transaction-manager="txManager" />
  
+    <!--//file upload bean-->
+    <bean id="fileValidator" class="com.mycompany.rboss.domain.FileValidator" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+    <!--//file upload bean-->
+    
     
     <bean id="userService" class="com.mycompany.rboss.service.UserService">
         <property name="userDAO" ref="userDAO"/>
@@ -158,6 +166,7 @@
     <bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter">
         <constructor-arg ref="roleHierarchy" />
     </bean>-->
+    
     
     <bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
         <property name="decisionVoters">
