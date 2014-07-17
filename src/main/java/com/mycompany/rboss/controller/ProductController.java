@@ -105,20 +105,23 @@ public class ProductController {
     @RequestMapping(value = "/searchProduct", method = RequestMethod.POST)
     public String searchProduct(RedirectAttributes re, Model model, String productName) {
         List<Product> products = productService.getProductByName(productName);
-
-        if (products.size() > 0) {  //searched product found           
+        int noOfProducts = products.size();
+        //if (noOfProducts > 0) {  //searched product found           
             re.addFlashAttribute("products", products);
-            return "redirect:/productResult";
-        } else {
-            re.addFlashAttribute("msg", "Product not found, please try again");
-            return "redirect:/notFound";
-        }
+            model.addAttribute("noOfProducts", noOfProducts);
+            List<Category> allCategories = categoryService.getAll();
+            model.addAttribute("categories", allCategories);
+            return "user/productList";
+//        } else {
+//            re.addFlashAttribute("msg", "Product not found, please try again");
+//            return "redirect:/notFound";
+//        }
     }
 
-    @RequestMapping(value = "/searchProduct", method = RequestMethod.GET)
-    public String searchProductByName() {;
-        return "searchProduct";
-    }
+//    @RequestMapping(value = "/searchProduct", method = RequestMethod.GET)
+//    public String searchProductByName() {
+//        return "searchProduct";
+//    }
 
     @RequestMapping(value = "/addCategory", method = RequestMethod.GET)
     public String addCategoryGet(@ModelAttribute("product") Product product, Model model) {
