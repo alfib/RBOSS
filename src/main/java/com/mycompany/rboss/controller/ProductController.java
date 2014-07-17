@@ -81,7 +81,7 @@ public class ProductController {
     public String addProduct(@Valid Product product, @RequestParam String category, BindingResult result, RedirectAttributes re) {
         Category ct = categoryService.get(Integer.parseInt(category));
         product.setCategory(ct);
-        String view = "redirect:/products";
+        String view = "redirect:/vendorProducts";
         if (!result.hasErrors()) {
             productService.add(product);
         } else {

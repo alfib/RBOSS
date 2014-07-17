@@ -2,7 +2,9 @@ package com.mycompany.rboss.controller;
 
 import com.mycompany.rboss.domain.Category;
 import com.mycompany.rboss.domain.FileValidator;
+import com.mycompany.rboss.domain.Product;
 import com.mycompany.rboss.domain.UploadedFile;
+import com.mycompany.rboss.service.ProductService;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,10 +31,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class UploadController {
 
+        
 	@Autowired
 	FileValidator fileValidator;
         @Autowired
         ServletContext servletContext;
+  
+              
+        @Autowired
+        ProductService productService;
         
 	@RequestMapping("/fileUploadForm")
 	public ModelAndView getUploadForm(
@@ -46,7 +53,8 @@ public class UploadController {
 			@ModelAttribute("uploadedFile") UploadedFile uploadedFile,
 			BindingResult result,@PathVariable int id) {
            
-                
+                        System.out.println("id----------->"+id);
+            
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
 
@@ -87,6 +95,9 @@ public class UploadController {
 			e.printStackTrace();
 		}
                 
+                  Product p=productService.get(id);
+                  p.setPicture(fileName);
+                  productService.update(p);
 //                Category ct = categoryService.get(Integer.parseInt(category));
 //                product.setCategory(ct);
 //                String view = "redirect:/products";

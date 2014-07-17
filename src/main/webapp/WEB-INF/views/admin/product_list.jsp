@@ -612,7 +612,7 @@
                                                         <tr class="odd gradeX">
                                                             <td>
                                                                 <a href="#" target="_blank">
-                                                                    <img src="#" alt="İmages" class="img-thumbnail" width="120px">
+                                                                    <img src="${pageContext.request.contextPath}/resources/products/${item.picture}" alt="İmages" class="img-thumbnail" width="120px">
                                                                 </a>
                                                             </td>
 
@@ -628,7 +628,7 @@
                                                                     </button>
                                                                 </form:form>  
                                                                 <form:form method="post" enctype="multipart/form-data"
-                                                                           modelAttribute="uploadedFile" action="${pageContext.request.contextPath}fileUpload/${item.id}">
+                                                                           modelAttribute="uploadedFile" action="${pageContext.request.contextPath}/fileUpload/${item.id}">
                                                                     <table>
                                                                         <tr>
                                                                             <td>Upload File:&nbsp;</td>
