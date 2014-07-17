@@ -22,7 +22,7 @@
     
     <http pattern="/" security="none" />
     <http pattern="/index" security="none" />
-    <http pattern="/register" security="none" />
+    <http pattern="/addUser" security="none" />
     
     <!--// By naimish-->
     <http pattern="/addCategory" security="none" />

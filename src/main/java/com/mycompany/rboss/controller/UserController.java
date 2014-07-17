@@ -62,7 +62,7 @@ public class UserController {
     @RequestMapping("/customLoginFailPage")
     public String customLoginFailPage(Model model) {
         model.addAttribute("msg", "Invalid Username or Password, please try again");
-        return "login";
+        return "user/login";
     }
     
     
@@ -83,7 +83,7 @@ public class UserController {
     }
     @RequestMapping("/default")
     public String gohome() {
-        return "home";
+        return "user/index";
     }
 
     
@@ -289,14 +289,14 @@ public class UserController {
         @RequestMapping(value="/activation/{id}" , method = RequestMethod.GET)
     public String activateAccount(@PathVariable("id") String id, Model model){
         boolean result = userService.activate(id);
-        if(result){
-            model.addAttribute("msg", "You are now a registered user");
-            
-        }else{
-            model.addAttribute("msg", "You are already registered");
-        }
+//        if(result){
+//            model.addAttribute("msg", "You are now a registered user");
+//            
+//        }else{
+//            model.addAttribute("msg", "You are already registered");
+//        }
     
-        return "redirect:/result";
+        return "redirect:/user/login";
     }
     
         
@@ -307,7 +307,7 @@ public class UserController {
     
         @RequestMapping(value = "/addUser", method = RequestMethod.GET)
     public String addUser(@ModelAttribute("customer") User customer) {
-        return "addCustomer";
+        return "user/register";
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
@@ -322,7 +322,7 @@ public class UserController {
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",customer);
-                 return "addCustomer";
+                 return "index";
             }
             
      
