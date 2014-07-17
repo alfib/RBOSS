@@ -338,7 +338,7 @@ public class UserController {
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String addUser( User customer, RedirectAttributes re,Model model) {
-        String view = "redirect:/login";
+        String view = "redirect:/index";
         //if (!result.hasErrors()) {
         String encodedUser=UUID.randomUUID().toString();
             customer.setEnabled(false);
@@ -350,7 +350,7 @@ public class UserController {
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
                 model.addAttribute("customer",customer);
-                 return "user/index";
+                return "user/index";
             }
             
      
