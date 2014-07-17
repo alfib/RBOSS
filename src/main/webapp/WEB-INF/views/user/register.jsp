@@ -19,7 +19,7 @@
                 <jsp:include page="sidebar.jsp" />
                 <div class="span9">
                     <ul class="breadcrumb">
-                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
+                        <li><a href="${pageContext.request.contextPath}">Home</a> <span class="divider">/</span></li>
                         <li class="active">User Registration</li>
                     </ul>
                     <h3> Registration</h3>	
@@ -51,7 +51,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="inputEmail">Email <sup>*</sup></label>
                                 <div class="controls">
-                               <form:input path="email"  id="inputEmail" placeholder="Email" />
+                               <form:input path="email" value="${email}" id="inputEmail" placeholder="Email" />
                                 </div>
                             </div>	  
                             <div class="control-group">

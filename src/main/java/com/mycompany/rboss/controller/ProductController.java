@@ -191,5 +191,16 @@ public class ProductController {
         return view;
     }
     
+    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
+    public String getProductDetails(@PathVariable int id, Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        Product product = productService.get(id);
+        model.addAttribute("product", product);
+        
+        return "user/product_details";
+    }
+    
    
 }

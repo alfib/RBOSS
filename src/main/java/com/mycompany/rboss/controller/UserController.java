@@ -100,7 +100,15 @@ public class UserController {
         return "home";
     }
     @RequestMapping("/default")
-    public String gohome() {
+    public String gohome(Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
 
@@ -411,5 +419,13 @@ public class UserController {
         
         System.out.println("----->"+emps);
         
+    }
+    
+    
+    @RequestMapping(value = "/partialRegister", method = RequestMethod.POST)
+    public String addUserTAdmin(Model model , String email) {
+        String view = "redirect:/addUser";
+        model.addAttribute("email", email);
+        return view;
     }
 }

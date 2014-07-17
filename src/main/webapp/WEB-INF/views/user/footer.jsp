@@ -2,27 +2,26 @@
     <div class="row">
         <div class="span3">
             <h5>ACCOUNT</h6>
-                <a href="login.jsp">YOUR ACCOUNT</a>
-                <a href="login.jsp">PERSONAL INFORMATION</a> 
-                <a href="login.jsp">ADDRESSES</a> 
-                <a href="login.jsp">DISCOUNT</a>  
-                <a href="login.jsp">ORDER HISTORY</a>
+                <a href="#">YOUR ACCOUNT</a>
+                <a href="#">PERSONAL INFORMATION</a> 
+                <a href="#">ADDRESSES</a> 
+                <a href="#">DISCOUNT</a>  
+                <a href="#">ORDER HISTORY</a>
         </div>
         <div class="span3">
             <h5>INFORMATION</h5>
-            <a href="contact.jsp">CONTACT</a>  
-            <a href="register.jsp">REGISTRATION</a>  
-            <a href="legal_notice.jsp">LEGAL NOTICE</a>  
-            <a href="tac.jsp">TERMS AND CONDITIONS</a> 
-            <a href="faq.jsp">FAQ</a>
+            <a href="${pageContext.request.contextPath}/contact">CONTACT</a>  
+            <a href="${pageContext.request.contextPath}/addUser">REGISTRATION</a>  
+            <a href="#">LEGAL NOTICE</a>  
+            <a href="#">TERMS AND CONDITIONS</a> 
+            <a href="#">FAQ</a>
         </div>
         <div class="span3">
             <h5>OUR OFFERS</h5>
-            <a href="#">NEW PRODUCTS</a> 
-            <a href="#">TOP SELLERS</a>  
-            <a href="special_offer.jsp">SPECIAL OFFERS</a>  
-            <a href="#">MANUFACTURERS</a> 
-            <a href="#">SUPPLIERS</a> 
+            <a href="${pageContext.request.contextPath}">NEW PRODUCTS</a> 
+            <a href="${pageContext.request.contextPath}">TOP SELLERS</a>  
+            <a href="#">SPECIAL OFFERS</a>  
+            <a href="#">VENDORS</a>
         </div>
         <div id="socialMedia" class="span3 pull-right">
             <h5>SOCIAL MEDIA </h5>

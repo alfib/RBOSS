@@ -60,7 +60,7 @@
                             <c:forEach var="product" items="${products}">
                                 <div class="row">	  
                                     <div id="productView" class="span2">
-                                        <img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/>
+                                        <img src="${pageContext.request.contextPath}/resources/products/${product.picture}" alt="${product.name}"/>
                                     </div>
                                     <div class="span4">
                                         <h3>${product.name}</h3>				
@@ -78,7 +78,7 @@
                                                 <label class="checkbox">
                                                     Quantity
                                                 </label>
-                                                <input type="text" name="quantity" value="1" size="3" style="text-align: right"/><br class="clr"/><br class="clr"/>
+                                                <input class="span1" type="text" name="quantity" value="1" size="3" style="text-align: right"/><br class="clr"/><br class="clr"/>
                                                 <i class=" icon-shopping-cart"></i>
                                                 <input type="submit" value="Add to cart" class="btn btn-large"/>
                                                 <a href="${pageContext.request.contextPath}/product/${product.id}" class="btn btn-large">VIEW</a>

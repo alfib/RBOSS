@@ -17,7 +17,7 @@
                 <%--<jsp:include page="sidebar.jsp" />--%>
                 <div class="span12">
                     <ul class="breadcrumb">
-                        <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
+                        <li><a href="${pageContext.request.contextPath}">Home</a> <span class="divider">/</span></li>
                         <li class="active">Login</li>
                     </ul>
                     <h3> Login</h3>	
@@ -28,11 +28,11 @@
                             <div class="well">
                                 <h5>CREATE YOUR ACCOUNT</h5><br/>
                                 Enter your e-mail address to create an account.<br/><br/><br/>
-                                <form action="register.jsp">
+                                <form method="post" action="${pageContext.request.contextPath}/partialRegister">
                                     <div class="control-group">
                                         <label class="control-label" for="inputEmail">E-mail address</label>
                                         <div class="controls">
-                                            <input class="span3"  type="text" id="inputEmail" placeholder="Email">
+                                            <input class="span3" name="email" type="text" id="inputEmail" placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="controls">
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <button type="submit" class="btn">Sign in</button> <a href="forgetpass.jsp">Forget password?</a>
+                                                <button type="submit" class="btn">Sign in</button> <a href="#">Forget password?</a>
                                             </div>
 
                                         </div>
