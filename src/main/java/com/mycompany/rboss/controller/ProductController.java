@@ -155,7 +155,6 @@ public class ProductController {
         model.addAttribute("noOfProducts", allProducts.size());
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
-        
 
         return "user/productList";
     }
@@ -169,7 +168,6 @@ public class ProductController {
         List<Product> allProducts = productService.getProductsByCat(id);
         model.addAttribute("products", allProducts);
         model.addAttribute("noOfProducts", allProducts.size());
-        
 
         return "user/productList";
     }

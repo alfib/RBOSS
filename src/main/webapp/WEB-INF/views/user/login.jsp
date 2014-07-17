@@ -1,5 +1,7 @@
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
     <jsp:include page="head_conf.jsp" />
@@ -50,21 +52,26 @@
                                 <form method="post" action="<c:url value='j_spring_security_check' />">
                                     <div class="control-group">
                                         <label class="control-label" for="username">Username</label>
+
                                         <div class="controls">
                                             <input class="span3"  type="text" id="inputEmail" placeholder="username"
                                                    name="j_username" value='<c:if test="${not empty param.login_error}"><c:out value="${SPRING_SECURITY_LAST_USERNAME}"/></c:if>'/>
+
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label" for="inputPassword">Password</label>
                                             <div class="controls">
+
                                                 <input type="password" name='j_password' class="span3"  id="inputPassword" placeholder="Password">
+
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <div class="controls">
                                                 <button type="submit" class="btn">Sign in</button> <a href="forgetpass.jsp">Forget password?</a>
                                             </div>
+
                                         </div>
                                     </form>
                                 </div>

@@ -54,18 +54,14 @@ public class User {
     private boolean enabled;   
     
      private String activationLink;
+     
+     private String parentCompany;
 
     public User() {
     }
 
      @Column(table = "userrole")
     private String authority;
-//    @Embedded
-//    @Valid
-//    private Address address = new Address();
-//    @Embedded
-//    @Valid
-//    private CreditCard creditCard = new CreditCard();
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<MyOrder> orders;
@@ -76,7 +72,7 @@ public class User {
     private List<Address> addresses = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL)
     private List<CreditCard> creditcards = new ArrayList<>();
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Product> vendorProducts = new ArrayList<>();
     
     @OneToMany
@@ -201,6 +197,31 @@ public class User {
 
     public void setVendorProducts(List<Product> vendorProducts) {
         this.vendorProducts = vendorProducts;
+    }
+
+    public User(String firstName, String lastName, String email, String userName, String password, String parentCompany) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+        this.parentCompany = parentCompany;
+    }
+
+    public String getParentCompany() {
+        return parentCompany;
+    }
+
+    public void setParentCompany(String parentCompany) {
+        this.parentCompany = parentCompany;
+    }
+
+    public List<Account> getAccount() {
+        return account;
+    }
+
+    public void setAccount(List<Account> account) {
+        this.account = account;
     }
 
     
