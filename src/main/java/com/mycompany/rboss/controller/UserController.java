@@ -317,6 +317,7 @@ public class UserController {
         String encodedUser=encoder.encode(customer.getUserName());
             customer.setEnabled(false);
             customer.setActivationLink(encodedUser);
+            customer.setAuthority("ROLE_USER");
             boolean x=userService.add(customer);
             if(x==false){
                 model.addAttribute("msg", "userName/email already exist, please try again ");
