@@ -107,7 +107,7 @@ public class ProductController {
         List<Product> products = productService.getProductByName(productName);
         int noOfProducts = products.size();
         //if (noOfProducts > 0) {  //searched product found           
-            re.addFlashAttribute("products", products);
+            model.addAttribute("products", products);
             model.addAttribute("noOfProducts", noOfProducts);
             List<Category> allCategories = categoryService.getAll();
             model.addAttribute("categories", allCategories);
