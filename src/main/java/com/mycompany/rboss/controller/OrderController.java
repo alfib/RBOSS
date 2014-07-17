@@ -108,4 +108,10 @@ public class OrderController {
         model.addAttribute("order", orderService.get(id));
         return "admin/order_details";
     }
+    
+    @RequestMapping(value = "/report", method = RequestMethod.GET)
+    public String getReport(Model model) {
+        //model.addAttribute("products", productService.getAll());
+        return "admin/report";
+    }
 }

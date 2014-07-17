@@ -31,6 +31,7 @@
     <http pattern="/fileUpload" security="none" />
     <http pattern="/fileUploadForm" security="none" />
     <http pattern="/products" security="none" />
+    <http pattern="/report" security="none" />
     <http pattern="/addAdminUser" security="none" />
     <http pattern="/addAdminUser/{id}" security="none" />
     <http pattern="/fileUpload/{id}" security="none" />

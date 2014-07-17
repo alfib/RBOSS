@@ -9,6 +9,7 @@ package com.mycompany.rboss.DAO;
 import com.mycompany.rboss.domain.Account;
 import java.util.List;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Transactional;
@@ -63,20 +64,23 @@ public class AccountDAO {
     }
         
      public void addAmount(long money,String uname){
-        Query q = openSession().createQuery("UPDATE Account SET ACCOUNT.money=ACCOUNT.money+"+money+" where Account.name=:uname");
+        Query q = openSession().createQuery("UPDATE ACCOUNT SET ACCOUNT.money=ACCOUNT.money+"+money+" where ACCOUNT.accName=:uname");
         q.setParameter("uname", uname);
         q.executeUpdate();
     }
     
     public void deductAmount(long money,String uname){
-        Query q = openSession().createQuery("UPDATE Account SET ACCOUNT.money=ACCOUNT.money-"+money+" where Account.name=:uname");
+        Query q = openSession().createQuery("UPDATE ACCOUNT SET ACCOUNT.money=ACCOUNT.money-"+money+" where ACCOUNT.accName=:uname");
         q.setParameter("uname", uname);
         q.executeUpdate();
     }
     
     public List<Account> getUserByName(String uname){
-        Query q = openSession().createQuery("SELECT a from Account a where Account.name=:uname");
-        q.setParameter("uname", uname);
+        //Query q = openSession().createQuery("FROM ACCOUNT where ACCOUNT.accName=:uname");
+        Query q = openSession().createQuery("FROM ACCOUNT");
+        SQLQuery q1= openSession().createSQLQuery("Select * FROM ACCOUNT where ACCOUNT.accName=:uname");
+        
+       // q1.setParameter("uname", uname);
         return q.list();
     }
     

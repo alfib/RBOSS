@@ -48,14 +48,14 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
       
-        <property name="url" value="jdbc:mysql://localhost/test" />
+<!--        <property name="url" value="jdbc:mysql://localhost/test" />
 
         <property name="username" value="root" />
-        <property name="password" value="" />
+        <property name="password" value="" />-->
 
-<!--        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
+        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
         <property name="username" value="naimish" />
-        <property name="password" value="password" />-->
+        <property name="password" value="password" />
         <!--  username and password of our database should match the aboves, 
         we should use those in phpMyAdmin if we are using WAMP for example-->
     </bean>

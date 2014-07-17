@@ -23,7 +23,7 @@ public class AccountRestFullService {
     @Autowired
     AccountService accountService;
 
-   public static final String SERVER_URI = "http://localhost:31503/SoftEng/restaccount/";
+   public static final String SERVER_URI = "http://localhost:31503/mycompany.com/restaccount/";
     
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public @ResponseBody
@@ -42,7 +42,7 @@ public class AccountRestFullService {
         a.setAccName(name.toLowerCase());
         a.setAccNo(give16DigitRendomNumber() + "");
         a.setPin(give3DigitRendomNumber() + "");
-        a.setExpDate("07/07/2014");
+        a.setExpDate("07-07-2014");
 
         accountService.add(a);
         //model.addAttribute("movie", name);
@@ -50,18 +50,24 @@ public class AccountRestFullService {
 
     }
 
-    @RequestMapping(value = "/add/{name}/{no}/{date}/{pin}/{money}/", method = RequestMethod.GET)
+    @RequestMapping(value = "/add/{name}", method = RequestMethod.GET)
     public @ResponseBody
-    String addAmount(@PathVariable String name,@PathVariable String no,
-            @PathVariable String date,@PathVariable String pin,
-            @PathVariable String money,ModelMap model) {
+    String addAmount(@PathVariable String name,ModelMap model) {
         
+        String[] listArg=name.split("_");
+        System.out.println(""+listArg[0]);
+                System.out.println(""+listArg[1]);
+                        System.out.println(""+listArg[2]);
+                                System.out.println(""+listArg[3]);
+                                        System.out.println(""+listArg[4]);
         Account account=new Account();
-        account.setAccName(name.toLowerCase());
-        account.setAccNo(no);
-        account.setExpDate(date);
-        account.setPin(pin);
-        account.setMoney(Long.parseLong(money));
+        account.setAccName(listArg[0].toLowerCase());
+        account.setAccNo(listArg[1]);
+        account.setExpDate(listArg[2]);
+        account.setPin(listArg[3]);
+        account.setMoney(Long.parseLong(listArg[4]));
+        System.out.println("--->"+account);
+        
         
         List<Account> accounts = accountService.getUserByName(account.getAccName());
 
@@ -69,15 +75,19 @@ public class AccountRestFullService {
             return "nv";
         } else {
             Account account1 = accounts.get(0);
-
+            System.out.println("--getAc-->"+account1);
             if(account1.equals(account)){
                 accountService.addAmount(account.getMoney(), account1.getAccName());
-                return "y";
+                System.out.println("---am-->added");
+                //return "y";
             }else{
-                return "f";
+                System.out.println("---am-->not added");
+                //return "f";
             }
             //model.addAttribute("movie", name);
         }
+        
+        return name;
     }
     
     /**
@@ -121,18 +131,18 @@ public class AccountRestFullService {
         }
     }
     
-    @RequestMapping(value = "/sub/{name}/{no}/{date}/{pin}/{money}/", method = RequestMethod.GET)
+    @RequestMapping(value = "/sub/{name}", method = RequestMethod.GET)
     public @ResponseBody
-    String deductAmount(@PathVariable String name,@PathVariable String no,
-            @PathVariable String date,@PathVariable String pin,
-            @PathVariable String money, ModelMap model) {
+    String deductAmount(@PathVariable String name, ModelMap model) {
 
+        String[] listArg=name.split("_");
+        
         Account account=new Account();
-        account.setAccName(name.toLowerCase());
-        account.setAccNo(no);
-        account.setExpDate(date);
-        account.setPin(pin);
-        account.setMoney(Long.parseLong(money));
+        account.setAccName(listArg[0].toLowerCase());
+        account.setAccNo(listArg[1]);
+        account.setExpDate(listArg[2]);
+        account.setPin(listArg[3]);
+        account.setMoney(Long.parseLong(listArg[4]));
         
         List<Account> accounts = accountService.getUserByName(account.getAccName());
 
@@ -153,6 +163,7 @@ public class AccountRestFullService {
             }
             //model.addAttribute("movie", name);
         }
+//        return name;
     }
 
     /**
@@ -192,9 +203,10 @@ public class AccountRestFullService {
 //2	e	8279462039496760	07/07/2014	5000	626	0
 
         //createAccount("xy");
-        //add("d", "7143779209017082", "07/07/2014", "752", 1000);
         
-        add2("d", "7143779209017082", "07/07/2014", "752", 1000);
+        add("d", "7143779209017082", "07-07-2014", "752", 1000);
+        
+        //add2("d", "7143779209017082", "07/07/2014", "752", 1000);
     }
     
      private static void createAccount(String name) {
@@ -220,7 +232,7 @@ public class AccountRestFullService {
         RestTemplate restTemplate = new RestTemplate();
         //we can't get List<Employee> because JSON convertor doesn't know the type of
         //object in the list and hence convert it to default JSON object type LinkedHashMap
-        String emps = restTemplate.getForObject(SERVER_URI+"add/"+name+"/"+no+"/"+date+"/"+pin+"/"+money, String.class);
+        String emps = restTemplate.getForObject(SERVER_URI+"add/"+name+"_"+no+"_"+date+"_"+pin+"_"+money, String.class);
         System.out.println("----->"+emps);
         
     }
@@ -229,7 +241,7 @@ public class AccountRestFullService {
         RestTemplate restTemplate = new RestTemplate();
         //we can't get List<Employee> because JSON convertor doesn't know the type of
         //object in the list and hence convert it to default JSON object type LinkedHashMap
-        String emps = restTemplate.getForObject(SERVER_URI+"sub/"+name+"/"+no+"/"+date+"/"+pin+"/"+money, String.class);
+        String emps = restTemplate.getForObject(SERVER_URI+"sub/"+name+"_"+no+"_"+date+"_"+pin+"_"+money, String.class);
         System.out.println("----->"+emps);
         
     }

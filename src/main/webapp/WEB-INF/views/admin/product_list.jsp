@@ -346,7 +346,7 @@
                     <!--<li><a href="comMsg.jsp"><i class="icon-columns"></i> Communication Massages </a></li>-->
                     <li><a href="${pageContext.request.contextPath}/adminlistAllUsers"><i class="icon-columns"></i> Membership </a></li>
                     <li><a href="${pageContext.request.contextPath}/settings"><i class="icon-columns"></i> Settings </a></li>
-
+                    <li><a href="${pageContext.request.contextPath}/reprot"><i class="icon-columns"></i> Report </a></li>
 
                     <!--
                         @Program : Naimish
