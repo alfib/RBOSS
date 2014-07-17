@@ -22,7 +22,7 @@
                                         <ul class="thumbnails">
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="${pageContext.request.contextPath}/resources/products/new.png"></a>
+                                                    <a  href="${pageContext.request.contextPath}/resources/products/new.png"></a>
                                                     <a  href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/1.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
@@ -35,7 +35,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="${pageContext.request.contextPath}/resources/products/new.png"></a>
+                                                    <a class="tag" href="${pageContext.request.contextPath}/resources/products/new.png"></a>
                                                     <a  href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/2.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>
@@ -48,7 +48,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="thumbnail">
-                                                    <a href="#" class="tag" src="${pageContext.request.contextPath}/resources/products/new.png"></a>
+                                                    <a class="tag" href="${pageContext.request.contextPath}/resources/products/new.png"></a>
                                                     <a  href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/3.jpg" alt=""/></a>
                                                     <div class="caption">
                                                         <h5>Product name</h5>

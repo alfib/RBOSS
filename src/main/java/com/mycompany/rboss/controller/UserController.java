@@ -320,7 +320,7 @@ public class UserController {
         String view = "redirect:/login";
         //if (!result.hasErrors()) {
         String encodedUser=encoder.encode(customer.getUserName());
-            customer.setEnabled(false);
+//            customer.setEnabled(false);
             customer.setActivationLink(encodedUser);
             customer.setAuthority("ROLE_USER");
             boolean x=userService.add(customer);

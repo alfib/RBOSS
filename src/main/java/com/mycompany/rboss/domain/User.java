@@ -51,11 +51,11 @@ public class User {
     @NotEmpty
     private String password;
   
-    private boolean enabled;   
+    private boolean enabled=true;   
     
      private String activationLink;
      
-     private String parentCompany;
+//     private String parentCompany;
 
     public User() {
     }
@@ -205,16 +205,16 @@ public class User {
         this.email = email;
         this.userName = userName;
         this.password = password;
-        this.parentCompany = parentCompany;
+       // this.parentCompany = parentCompany;
     }
 
-    public String getParentCompany() {
-        return parentCompany;
-    }
-
-    public void setParentCompany(String parentCompany) {
-        this.parentCompany = parentCompany;
-    }
+//    public String getParentCompany() {
+//        return parentCompany;
+//    }
+//
+//    public void setParentCompany(String parentCompany) {
+//        this.parentCompany = parentCompany;
+//    }
 
     public List<Account> getAccount() {
         return account;
