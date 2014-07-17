@@ -83,7 +83,7 @@ public class UserController {
     }
     @RequestMapping("/default")
     public String gohome() {
-        return "/home";
+        return "user/index";
     }
 
     
@@ -289,14 +289,14 @@ public class UserController {
         @RequestMapping(value="/activation/{id}" , method = RequestMethod.GET)
     public String activateAccount(@PathVariable("id") String id, Model model){
         boolean result = userService.activate(id);
-        if(result){
-            model.addAttribute("msg", "You are now a registered user");
-            
-        }else{
-            model.addAttribute("msg", "You are already registered");
-        }
+//        if(result){
+//            model.addAttribute("msg", "You are now a registered user");
+//            
+//        }else{
+//            model.addAttribute("msg", "You are already registered");
+//        }
     
-        return "redirect:/message";
+        return "redirect:/user/login";
     }
     
         
@@ -312,7 +312,7 @@ public class UserController {
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public String addUser( User customer, RedirectAttributes re,Model model) {
-        String view = "redirect:/user/login";
+        String view = "redirect:/login";
         //if (!result.hasErrors()) {
         String encodedUser=encoder.encode(customer.getUserName());
             customer.setEnabled(false);
@@ -336,4 +336,41 @@ public class UserController {
         return view;
     }
     
+    @RequestMapping(value = "/addAdminUser", method = RequestMethod.POST)
+    public String addUserTAdmin( User customer, RedirectAttributes re,Model model) {
+        String view = "redirect:/adminlistAllUsers";
+        //if (!result.hasErrors()) {
+        String encodedUser=encoder.encode(customer.getUserName());
+            customer.setEnabled(true);
+            boolean x=userService.add(customer);
+            if(x==false){
+                model.addAttribute("msg", "userName/email already exist, please try again ");
+                model.addAttribute("customer",customer);
+                 return "/addAdminUser";
+            }
+            
+           
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser", method = RequestMethod.GET)
+    public String addUserTAdminGet( User customer, RedirectAttributes re,Model model) {
+        String view = "admin/users_add";
+       
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser/{id}", method = RequestMethod.GET)
+    public String addUserTAdminGet( @PathVariable("id") int id, RedirectAttributes re,Model model) {
+        model.addAttribute("user",userService.get(id));
+        String view = "admin/users_edit";
+        return view;
+    }
+    
+    @RequestMapping(value = "/addAdminUser/{id}", method = RequestMethod.POST)
+    public String addUserTAdminPOST(@Valid User user ,@PathVariable("id") int id, RedirectAttributes re,Model model) {
+        userService.update(user);
+        String view = "/adminlistAllUsers";
+        return view;
+    }
 }

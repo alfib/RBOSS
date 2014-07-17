@@ -47,9 +47,15 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+
         <property name="url" value="jdbc:mysql://localhost/test" />
         <property name="username" value="root" />
         <property name="password" value="" />
+
+<!--        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
+        <property name="username" value="naimish" />
+        <property name="password" value="password" />-->
+
 <!--        <property name="url" value="jdbc:mysql://54.88.228.192:3306/Naimish" />
         <property name="username" value="naimish" />
         <property name="password" value="password" />-->
@@ -62,7 +68,7 @@
           class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="properties">
             <props>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect </prop>               
                 <prop key="connection.pool_size">1</prop>
                 <prop key="hibernate.show_sql">true</prop>

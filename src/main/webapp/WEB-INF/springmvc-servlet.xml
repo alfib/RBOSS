@@ -49,6 +49,7 @@
     <mvc:resources mapping="/resources/**" location="/WEB-INF/views/user/resources/"/>
 
     <mvc:resources mapping="/assets/**"  location="/WEB-INF/views/admin/assets/"/>
+    <mvc:resources mapping="addAdminUser/assets/**"  location="/WEB-INF/views/admin/assets/"/>
 </beans>
     
 
