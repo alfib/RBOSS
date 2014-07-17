@@ -29,16 +29,16 @@
                     <div>
                         <h3>New Products </h3>
                         <ul class="thumbnails">
-                            <c:forEach var="cat" items="${newProducts}">
+                            <c:forEach var="newprod" items="${newProducts}">
                                  <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/9.jpg" alt=""/></a>
+                                    <a  href="${pageContext.request.contextPath}/product/${newprod.id}"><img src="${pageContext.request.contextPath}/resources/products/${newprod.picture}" alt=""/></a>
                                     <div class="caption">
-                                        <h5>Product name</h5>
+                                        <h5>${newprod.name}</h5>
                                         <p> 
-                                            Lorem Ipsum is simply dummy text. 
+                                            ${newprod.description}
                                         </p>
-                                        <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                        <h4><a class="btn btn-large" href="${pageContext.request.contextPath}/product/${newprod.id}">VIEW</a> <span class="pull-right">$${newprod.price}</span></h4>
                                     </div>
                                 </div>
                             </li>
@@ -49,16 +49,16 @@
                         <h3>Feature Products </h3>
 
                         <ul class="thumbnails">
-                            <c:forEach var="cat" items="${featuredProducts}">
+                            <c:forEach var="featprod" items="${featuredProducts}">
                                  <li class="span3">
                                 <div class="thumbnail">
-                                    <a  href="product_details.jsp"><img src="${pageContext.request.contextPath}/resources/products/9.jpg" alt=""/></a>
+                                    <a  href="${pageContext.request.contextPath}/product/${featprod.id}"><img src="${pageContext.request.contextPath}/resources/products/${featprod.picture}" alt=""/></a>
                                     <div class="caption">
-                                        <h5>Product name</h5>
+                                        <h5>${featprod.name}</h5>
                                         <p> 
-                                            Lorem Ipsum is simply dummy text. 
+                                             ${featprod.description}
                                         </p>
-                                        <h4><a class="btn btn-large" href="product_details.jsp">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                                        <h4><a class="btn btn-large" href="${pageContext.request.contextPath}/product/${featprod.id}">VIEW</a> <span class="pull-right">$${featprod.price}</span></h4>
                                     </div>
                                 </div>
                             </li>

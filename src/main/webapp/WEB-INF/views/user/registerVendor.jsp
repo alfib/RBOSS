@@ -20,7 +20,7 @@
                 <div class="span9">
                     <ul class="breadcrumb">
                         <li><a href="index.jsp">Home</a> <span class="divider">/</span></li>
-                        <li class="active">Registration</li>
+                        <li class="active">Vendor Registration</li>
                     </ul>
                     <h3> Registration</h3>	
                     <hr class="soft"/>
@@ -33,7 +33,7 @@
                             <button type="button" class="close" data-dismiss="alert">×</button>
                             <strong>
                         </div>
-                        <form:form   commandName="customer" action="addUser" method="post" class="form-horizontal" >
+                        <form:form   commandName="vendor" action="addUser" method="post" class="form-horizontal" >
                             <h3>Your personal information</h3>
                             
                             <div class="control-group">
