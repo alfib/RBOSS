@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletContext;
 import javax.ws.rs.PathParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -40,10 +41,10 @@ public class UploadController {
 		return new ModelAndView("uploadForm");
 	}
 
-	@RequestMapping("/fileUpload")
+	@RequestMapping("/fileUpload/{id}")
 	public ModelAndView fileUploaded(
 			@ModelAttribute("uploadedFile") UploadedFile uploadedFile,
-			BindingResult result) {
+			BindingResult result,@PathVariable int id) {
            
                 
 		InputStream inputStream = null;
