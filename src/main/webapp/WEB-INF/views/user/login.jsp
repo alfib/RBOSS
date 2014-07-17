@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Jul 14, 2014, 3:04:11 PM
-    Author     : bidur
---%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -56,35 +51,37 @@
                                 </c:if>
                                 <form method="post" action="<c:url value='j_spring_security_check' />">
                                     <div class="control-group">
-                                        <label class="control-label" for="inputEmail">User Name</label>
-                                        <div class="controls">
+                                        <label class="control-label" for="username">Username</label>
 
-                                            <input class="span3"  type="text" id="inputEmail" placeholder="UserName" name="j_username" value='<c:if test="${not empty param.login_error}"><c:out value="${SPRING_SECURITY_LAST_USERNAME}"/></c:if>'/>
+                                        <div class="controls">
+                                            <input class="span3"  type="text" id="inputEmail" placeholder="username"
+                                                   name="j_username" value='<c:if test="${not empty param.login_error}"><c:out value="${SPRING_SECURITY_LAST_USERNAME}"/></c:if>'/>
+
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label" for="inputPassword">Password</label>
                                             <div class="controls">
 
-                                                <input type="password" class="span3"  id="inputPassword" placeholder="Password" name='j_password' />
+                                                <input type="password" name='j_password' class="span3"  id="inputPassword" placeholder="Password">
+
                                             </div>
                                         </div>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <button type="submit" class="btn">Sign in</button> <a href="forgetpass.jsp">Forget password?</a>
+                                            </div>
 
-                                        <input type="hidden" name="<c:out value="${_csrf.parameterName}"/>" value="<c:out value="${_csrf.token}"/>"/>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button type="submit" class="btn">Sign in</button> <a href="forgetpass.jsp">Forget password?</a>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                    </div>	
+                        </div>	
 
+                    </div>
                 </div>
-            </div>
-            <!-- Footer ------------------------------------------------------ -->
-            <hr class="soft">
+                <!-- Footer ------------------------------------------------------ -->
+                <hr class="soft">
             <jsp:include page="footer.jsp" />
             </body>
             </html>

@@ -149,23 +149,26 @@ public class ProductController {
 
     /*for end users */
     @RequestMapping(value = "/products", method = RequestMethod.GET)
-    public String getAllProducts(@ModelAttribute("product") Product product,Model model) {
+    public String getAllProducts(@ModelAttribute("product") Product product, Model model) {
         List<Product> allProducts = productService.getAll();
         model.addAttribute("products", allProducts);
         model.addAttribute("noOfProducts", allProducts.size());
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
+
         return "user/productList";
     }
 
     @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
-    public String getProductsCat(@PathVariable int id, Model model) {
+    public String getProductsCat(
+            @PathVariable int id, Model model) {
         List<Category> allCategories = categoryService.getAll();
         model.addAttribute("categories", allCategories);
         
         List<Product> allProducts = productService.getProductsByCat(id);
         model.addAttribute("products", allProducts);
         model.addAttribute("noOfProducts", allProducts.size());
+
         return "user/productList";
     }
     
