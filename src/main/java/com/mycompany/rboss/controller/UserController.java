@@ -100,7 +100,15 @@ public class UserController {
         return "home";
     }
     @RequestMapping("/default")
-    public String gohome() {
+    public String gohome(Model model) {
+        List<Category> allCategories = categoryService.getAll();
+        model.addAttribute("categories", allCategories);
+        
+        List<Product> newProducts = productService.getAllNew();
+        model.addAttribute("newProducts", newProducts);
+        
+        List<Product> featuredProducts = productService.getAllFeatured();
+        model.addAttribute("featuredProducts", featuredProducts);
         return "user/index";
     }
 

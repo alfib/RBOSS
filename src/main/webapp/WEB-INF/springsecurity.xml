@@ -33,6 +33,7 @@
     <http pattern="/products" security="none" />
     <http pattern="/addAdminUser" security="none" />
     <http pattern="/addAdminUser/{id}" security="none" />
+    <http pattern="/fileUpload/{id}" security="none" />
     <http pattern="/adminlistAllUsers" security="none" />
     <http pattern="/products/delete" security="none" />
     <http pattern="/adminuser/delete" security="none" />

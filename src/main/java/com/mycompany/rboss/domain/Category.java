@@ -19,7 +19,7 @@ import javax.persistence.Id;
 public class Category {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id;
     
     private String status="ACTIVE";  //ACTIVE- product is not deleted
